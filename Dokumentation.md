@@ -1,4 +1,4 @@
- # Platformen und Frameworks – Flexrent
+ # Plattformen und Frameworks – Flexrent
 
 ## Marketing:
 - Werbung über Youtube, Instagram auf gezielte Zielgruppen:
