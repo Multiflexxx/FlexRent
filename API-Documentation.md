@@ -95,7 +95,7 @@ none
 
 | Name          | Type           |Required        | Description
 | ------------- |-------------   |-------------   | -----
-| body (body)   | object         | x              |   body object for the user authentification ```{"session_id": "hwhroqhqrprhqp20",```<br>``` "user_id": "1"}  ```                
+| body (body)   | object         | x              |   body object for the user authentification ```{ ```<br>```"session_id": "hwhroqhqrprhqp20",```<br>``` "user_id": "1"```<br>```}  ```                
 
 
 ### Success Responses
@@ -163,7 +163,7 @@ none
 | Name          | Type           |Required        | Description
 | ------------- |-------------   |-------------   | -----
 | id (path)     | string         |        x       | ID of the offer      
-| body (body)   | object         | x              | Offer body with the updated attributes<br>  ```{"session_id": "hka09whoöam", "user_id": "1",```<br>``` "title": "Test offer", ```<br>``` "description": "This is a test offer", ```<br>``` "price": 12.50, ``` <br>``` "category_id": 1, ``` <br>``` "delete_images": [...], ``` <br>```"blocked_dates": [{ ```<br>```"from_date": "2021-04-23T00:00:00.000Z", ```<br>```"to_date": "2021-04-23T00:00:00.000Z" }]```<br>```} ```       
+| body (body)   | object         | x              | Offer body with the updated attributes<br>  ```{```<br>```"session_id": "hka09whoöam", ```<br>```"user_id": "1",```<br>``` "title": "Test offer", ```<br>``` "description": "This is a test offer", ```<br>``` "price": 12.50, ``` <br>``` "category_id": 1, ``` <br>``` "delete_images": [...], ``` <br>```"blocked_dates": [{ ```<br>```"from_date": "2021-04-23T00:00:00.000Z", ```<br>```"to_date": "2021-04-23T00:00:00.000Z" }]```<br>```} ```       
 
 
 ### Success Responses
@@ -186,7 +186,7 @@ none
 
 | Name          | Type           |Required        | Description
 | ------------- |-------------   |-------------   | -----
-| body (body) | object         |  x              | Offer body that should be created <br> ```{"session_id": "hoazuebq98zb", ```<br>``` "user_id": "1", ```<br>``` "title": "New offer", ```<br>``` "description": "This is a new offer", ```<br>``` "price": 12.50, ```<br>``` "category_id": 1, "blocked_dates": [{ ```<br>```"from_date": "2021-04-23T00:00:00.000Z", ```<br>```"to_date": "2021-04-23T00:00:00.000Z" }]```<br>```} ```                        
+| body (body) | object         |  x              | Offer body that should be created <br> ```{```<br>```"session_id": "hoazuebq98zb", ```<br>``` "user_id": "1", ```<br>``` "title": "New offer", ```<br>``` "description": "This is a new offer", ```<br>``` "price": 12.50, ```<br>``` "category_id": 1, "blocked_dates": [{ ```<br>```"from_date": "2021-04-23T00:00:00.000Z", ```<br>```"to_date": "2021-04-23T00:00:00.000Z" }]```<br>```} ```                        
 
 ### Success Responses
 
