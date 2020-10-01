@@ -309,13 +309,65 @@ none
 | limit (query) | string         |                |Standard=25                        
 
 
-### Responses
+### Success Responses
 
-| Code          | Description           | Error Message      
+| Code          | Description           | Response      
 | ------------- |---------------------  |-------------
 | 200           | OK                    | 
 | 201           | CREATED               |  
+
+### Error
+
+| Code          | Description           | Error Message      
+| ------------- |---------------------  |------------- 
 | 400           | BAD REQUEST           |
 | 401           | UNAUTHORIZED          |
 | 404           | NOT  FOUND            |
 | 500           | INTERNAL SERVER ERROR |
+
+<br>
+
+## `GET` /user/{id}
+### Parameters
+
+| Name          | Type           |Required        | Description
+| ------------- |-------------   |------------    | -----
+| id (path) | string         |     x           | ID of the user                     
+
+
+### Success Responses
+
+| Code          | Description           | Response      
+| ------------- |---------------------  |-------------
+| 200           | OK                    | 
+
+### Error
+
+| Code          | Description           | Error Message      
+| ------------- |---------------------  |------------- 
+| 404           | NOT  FOUND            | User not found
+| 500           | INTERNAL SERVER ERROR | Something went wrong
+
+<br>
+
+## `PUT` /user
+### Parameters
+
+| Name          | Type           |Required        | Description
+| ------------- |-------------   |------------    | -----
+| body (body) | object         |     x           | ``` {```<br>```"user_id": "", ```<br>``` "first_name": "Max", ```<br>``` "last_name": "Mustermann", ```<br>``` "email": "Max.Mustermann@flexrent.com", ```<br>``` "phone_number": "01234567", ```<br>``` "password_hash": "hoüh03uphrfupn",```<br>```  "verified": "false", ```<br>``` "place_id"= 1, ```<br>``` "post_code": "1234", ```<br>``` "city": "Musterstadt", ```<br>``` "street": "Musterstraße", ```<br>```"house_number": 11, ```<br>```"lessee_rating": 0, ```<br>```"number_of_lessee_ratings": 0, ```<br>```"lessor_rating": 0, ```<br>```"number_of_lessor_ratings": 0, ```<br>```"date_of_birth": 1989-04-23T00:00:00.000Z ```<br>```}```
+
+
+### Success Responses
+
+| Code          | Description           | Response      
+| ------------- |---------------------  |------------- 
+| 201           | CREATED               |  
+
+### Error
+
+| Code          | Description           | Error Message      
+| ------------- |---------------------  |------------- 
+| 400           | BAD REQUEST           | Not a valid input
+| 401           | UNAUTHORIZED          | Email and password don't match
+| 500           | INTERNAL SERVER ERROR | Something went wrong
