@@ -95,7 +95,7 @@ none
 
 | Name          | Type           |Required        | Description
 | ------------- |-------------   |-------------   | -----
-| body (body)   | object         | x              |   body object for the user authentification ```{ ```<br>```"session_id": "hwhroqhqrprhqp20",```<br>``` "user_id": "1"```<br>```}  ```                
+| body (body)   | object         | x              |   body object for the user authentification <br>```{ ```<br>```"session_id": "hwhroqhqrprhqp20",```<br>``` "user_id": "1"```<br>```}  ```                
 
 
 ### Success Responses
