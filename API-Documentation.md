@@ -3,7 +3,7 @@
 ## OFFER
 ***
 
-## `GET` /offer/all
+## `Methode` /template
 ### Parameters
 
 | Name          | Type           |Required        | Description
