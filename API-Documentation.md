@@ -1,5 +1,74 @@
 
 # Flex-Rent
+## OBJECT-DEFINITION
+***
+Offer:<a name="offer_object"></a>
+```javascript
+{
+    offer_id: string,
+    title: string,
+    description: string,
+    number_of_ratings: number,
+    rating: number,
+    price: number,
+    category: {
+        name: string,
+        category_id: number,
+        picture_link?: string
+    },
+    picture_links?: Array<string>,
+    blocked_dates?: Array<{
+        from_date: Date,
+        to_date: Date
+    }>,
+    lessor?: {
+        first_name: string,
+        last_name: string,
+        user_id: string,
+        post_code: string,
+        city: string,
+        verified: boolean,
+        lessor_rating: number
+        number_of_lessor_ratings: number
+    } 
+}
+```
+IMPORTANT:<br>
+Offers in Arrays for `GET` calls do not contain `blocked_dates`!
+
+Category:<a name="category_object"></a>
+```javascript
+{
+    category_id: number,
+    name: string,
+    picture_link: string
+}
+```
+
+User:<a name="user_object"></a>
+```javascript
+{
+    user_id: string,
+    first_name: string,
+    last_name: string,
+    email?: string,
+    phone_number?: string,
+    password_hash?: string,
+    verified: boolean,
+    place_id?: number,
+    post_code?: string,
+    city?: string,
+    street?: string,
+    house_number?: string,
+    lessee_rating: number,
+    number_of_lessee_ratings: number,
+    lessor_rating: number,
+    number_of_lessor_ratings: number,
+    date_of_birth?: Date,
+}
+```
+
+***
 ## OFFER
 ***
 
@@ -35,7 +104,7 @@
 
 | Name          | Type           |Required        | Description
 | ------------- |-------------   |------------    | -----
-| limit (query) | string         |                |Standard=25                        
+| limit (query) | string         |                |Standard limit: 25                        
 | category (query)| string       |                | Category ID of the offer
 | search (query) | string        |                | Part of title of the offer
 
@@ -44,6 +113,11 @@
 | Code          | Description           | Message      
 | ------------- |---------------------  |-------------
 | 200           | OK                    | 
+
+Response example:
+
+`Array<`[Offer](#offer_object)`>`
+
 
 ### Error
 | Code          | Description           | Error Message      
@@ -57,7 +131,7 @@
 
 ### Parameters
 
-none                     
+none 
 
 
 ### Success Responses
@@ -65,6 +139,10 @@ none
 | Code          | Description           | Response      
 | ------------- |---------------------  |-------------
 | 200           | OK                    | 
+
+Response example:
+
+`Array<`[Category](#category_object)`>`
 
 ### Error
 
@@ -80,7 +158,7 @@ none
 
 | Name          | Type           |Required        | Description
 | ------------- |-------------   |-------------   | -----
-| id (path)     | string         |       x        |Image ID                       
+| id (path)     | string         |       x        | Image ID                       
 
 
 ### Success Responses
@@ -88,6 +166,8 @@ none
 | Code          | Description           | Response      
 | ------------- |---------------------  |-------------
 | 200           | OK                    |  
+
+Returns the image.
 
 ### Error
 
@@ -96,14 +176,14 @@ none
 | 404           | NOT  FOUND            | Image not found
 <br>
 
-## `GET` /offer/user-offers
+## `GET` /offer/user-offers/{id}
 
 #### Returns all offers for a user id. Authorization required.
 ### Parameters
 
 | Name          | Type           |Required        | Description
 | ------------- |-------------   |-------------   | -----
-| body (body)   | object         | x              |   body object for the user authentification <br>```{ ```<br>```"session_id": "hwhroqhqrprhqp20",```<br>``` "user_id": "1"```<br>```}  ```                
+| id (path)     | string         | x              | ID of the user
 
 
 ### Success Responses
@@ -111,6 +191,10 @@ none
 | Code          | Description           | Response      
 | ------------- |---------------------  |-------------
 | 200           | OK                    |  
+
+Response example:
+
+`Array<`[Offer](#offer_object)`>`
 
 ### Error
 
@@ -133,6 +217,16 @@ none
 | Code          | Description           | Response      
 | ------------- |--------------------   |-------------
 | 200           | OK                    | 
+
+Response example:
+
+```javascript
+{
+    "best_offers": Array<Offer>,
+    "best_lessors": Array<Offer>,
+    "latest_offers": Array<Offer>
+}
+```
 
 
 ### Error
@@ -157,6 +251,43 @@ none
 | ------------- |---------------------  |-------------
 | 200           | OK                    | 
 
+Example response:
+```javascript
+{
+    "offer_id": "eef88333-2118-4f2e-950c-444f2a31da10",
+    "title": "Title of the offer",
+    "description": "Description of the offer (up to 500 chars)",
+    "number_of_ratings": 1,
+    "rating": 5.0,
+    "price": 12.25,
+    "category": {
+        "name": "Electronics",
+        "category_id": 1,
+        "picture_link": "/link/to/image/"
+    },
+    "picture_links": [
+      "/link/to/image/",
+      "/link/to/image/"
+    ],
+    "lessor": {
+        "first_name": "Name",
+        "last_name": "Name",
+        "user_id": "eef88333-2118-4f2e-950c-444f2a31da10",
+        "post_code": "1067",
+        "city": "Dresden",
+        "verified": false,
+        "lessor_rating": 4.1,
+        "number_of_lessor_ratings": 20
+    },
+    "blocked_dates": [
+        {
+            "from_date": "2021-04-23T00:00:00.000Z",
+            "to_date": "2021-04-23T00:00:00.000Z"
+        }
+    ]
+}
+```
+
 ### Error
 
 | Code          | Description           | Error Message      
@@ -174,7 +305,7 @@ none
 | Name          | Type           |Required        | Description
 | ------------- |-------------   |-------------   | -----
 | id (path)     | string         |        x       | ID of the offer      
-| body (body)   | object         | x              | Offer body with the updated attributes<br>  ```{```<br>```"session_id": "hka09whoöam", ```<br>```"user_id": "1",```<br>``` "title": "Test offer", ```<br>``` "description": "This is a test offer", ```<br>``` "price": 12.50, ``` <br>``` "category_id": 1, ``` <br>``` "delete_images": [...], ``` <br>```"blocked_dates": [{ ```<br>```"from_date": "2021-04-23T00:00:00.000Z", ```<br>```"to_date": "2021-04-23T00:00:00.000Z" }]```<br>```} ```       
+| body (body)   | object         | x              | Offer body with the updated attributes<br>   ```{```<br>&nbsp;&nbsp;&nbsp;```"session": { ```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``` "session_id": "eef88333-2118-4f2e-950c-444f2a31da10", ```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``` "user_id": "eef88333-2118-4f2e-950c-444f2a31da10" ```<br>&nbsp;&nbsp;&nbsp;```}, ```<br>&nbsp;&nbsp;&nbsp;```"offer": {```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``` "title": "New offer", ```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``` "description": "This is a new offer", ```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``` "price": 12.50, ```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``` "category": { ```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```"category_id": 1```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```},```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``` "blocked_dates": [```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```{ ```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```"from_date": "2021-04-23T00:00:00.000Z", ```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```"to_date": "2021-04-23T00:00:00.000Z" ```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```}```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```],```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```"delete_images": [```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```"/path/to/file/", "/path/to/file/"```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```]```<br>&nbsp;&nbsp;&nbsp;```}```<br>``` }```    
 
 
 ### Success Responses
@@ -183,6 +314,42 @@ none
 | ------------- |---------------------  |-------------
 | 200           | OK                    | 
 
+Example response:
+```javascript
+{
+    "offer_id": "eef88333-2118-4f2e-950c-444f2a31da10",
+    "title": "Title of the offer",
+    "description": "Description of the offer (up to 500 chars)",
+    "number_of_ratings": 1,
+    "rating": 5.0,
+    "price": 12.25,
+    "category": {
+        "name": "Electronics",
+        "category_id": 1,
+        "picture_link": "/link/to/image/"
+    },
+    "picture_links": [
+      "/link/to/image/",
+      "/link/to/image/"
+    ],
+    "lessor": {
+        "first_name": "Name",
+        "last_name": "Name",
+        "user_id": "eef88333-2118-4f2e-950c-444f2a31da10",
+        "post_code": "1067",
+        "city": "Dresden",
+        "verified": false,
+        "lessor_rating": 4.1,
+        "number_of_lessor_ratings": 20
+    },
+    "blocked_dates": [
+        {
+            "from_date": "2021-04-23T00:00:00.000Z",
+            "to_date": "2021-04-23T00:00:00.000Z"
+        }
+    ]
+}
+```
 
 ### Error
 
@@ -198,7 +365,7 @@ none
 
 | Name          | Type           |Required        | Description
 | ------------- |-------------   |-------------   | -----
-| body (body) | object         |  x              | Offer body that should be created <br> ```{```<br>&nbsp;&nbsp;&nbsp;```"session": { ```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``` "session_id": "hoazuebq98zb", ```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``` "user_id": "1" ```<br>&nbsp;&nbsp;&nbsp;```}, ```<br>&nbsp;&nbsp;&nbsp;```"offer": {```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``` "title": "New offer", ```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``` "description": "This is a new offer", ```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``` "price": 12.50, ```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``` "category": { ```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```"category_id": 1```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```},```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``` "blocked_dates": [```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```{ ```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```"from_date": "2021-04-23T00:00:00.000Z", ```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```"to_date": "2021-04-23T00:00:00.000Z" ```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```}```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```]```<br>&nbsp;&nbsp;&nbsp;```}```<br>``` }```                        
+| body (body) | object         |  x              | Offer body that should be created <br> ```{```<br>&nbsp;&nbsp;&nbsp;```"session": { ```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``` "session_id": "eef88333-2118-4f2e-950c-444f2a31da10", ```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``` "user_id": "eef88333-2118-4f2e-950c-444f2a31da10" ```<br>&nbsp;&nbsp;&nbsp;```}, ```<br>&nbsp;&nbsp;&nbsp;```"offer": {```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``` "title": "New offer", ```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``` "description": "This is a new offer", ```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``` "price": 12.50, ```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``` "category": { ```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```"category_id": 1```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```},```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``` "blocked_dates": [```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```{ ```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```"from_date": "2021-04-23T00:00:00.000Z", ```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```"to_date": "2021-04-23T00:00:00.000Z" ```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```}```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```]```<br>&nbsp;&nbsp;&nbsp;```}```<br>``` }```                        
 
 ### Success Responses
 
@@ -206,6 +373,42 @@ none
 | ------------- |---------------------  |-------------
 | 201           | CREATED               |  
 
+Example response:
+```javascript
+{
+    "offer_id": "eef88333-2118-4f2e-950c-444f2a31da10",
+    "title": "Title of the offer",
+    "description": "Description of the offer (up to 500 chars)",
+    "number_of_ratings": 1,
+    "rating": 5.0,
+    "price": 12.25,
+    "category": {
+        "name": "Electronics",
+        "category_id": 1,
+        "picture_link": "/link/to/image/"
+    },
+    "picture_links": [
+      "/link/to/image/",
+      "/link/to/image/"
+    ],
+    "lessor": {
+        "first_name": "Name",
+        "last_name": "Name",
+        "user_id": "eef88333-2118-4f2e-950c-444f2a31da10",
+        "post_code": "1067",
+        "city": "Dresden",
+        "verified": false,
+        "lessor_rating": 4.1,
+        "number_of_lessor_ratings": 20
+    },
+    "blocked_dates": [
+        {
+            "from_date": "2021-04-23T00:00:00.000Z",
+            "to_date": "2021-04-23T00:00:00.000Z"
+        }
+    ]
+}
+```
 ### Error
 
 | Code          | Description           | Error Message      
@@ -215,14 +418,18 @@ none
 
 <br>
 
-## `PUT` /offer/images
+## `POST` /offer/images
 #### Accepts up to ten files to upload images
 ### Parameters
+Accepts only a multipartform request (instead of JSON)
 
 | Name          | Type          | Required       |   Description
 | ------------- |-------------  |-------------   | -----
 | images (path) | array         |       x        |Array of multipart image files
-| body (body)   | object        |      x         |```{```<br>```"session_id": 1,```<br>``` "offer_id": 1,```<br>``` "user_id": 1```<br>```}```
+| offer_id     | string         |       x        | ID of offer <br> ```eef88333-2118-4f2e-950c-444f2a31da10```
+| user_id      | string         |       x        | ID of user <br> ```eef88333-2118-4f2e-950c-444f2a31da10```
+| session_id   | string         |       x        | ID of session <br> ```eef88333-2118-4f2e-950c-444f2a31da10```
+
 
 ### Success Responses
 
@@ -230,6 +437,42 @@ none
 | ------------- |---------------------  |-------------
 | 200           | OK                    | 
 
+Example response:
+```javascript
+{
+    "offer_id": "eef88333-2118-4f2e-950c-444f2a31da10",
+    "title": "Title of the offer",
+    "description": "Description of the offer (up to 500 chars)",
+    "number_of_ratings": 1,
+    "rating": 5.0,
+    "price": 12.25,
+    "category": {
+        "name": "Electronics",
+        "category_id": 1,
+        "picture_link": "/link/to/image/"
+    },
+    "picture_links": [
+      "/link/to/image/",
+      "/link/to/image/"
+    ],
+    "lessor": {
+        "first_name": "Name",
+        "last_name": "Name",
+        "user_id": "eef88333-2118-4f2e-950c-444f2a31da10",
+        "post_code": "1067",
+        "city": "Dresden",
+        "verified": false,
+        "lessor_rating": 4.1,
+        "number_of_lessor_ratings": 20
+    },
+    "blocked_dates": [
+        {
+            "from_date": "2021-04-23T00:00:00.000Z",
+            "to_date": "2021-04-23T00:00:00.000Z"
+        }
+    ]
+}
+```
 ### Error 
 
 | Code          | Description           | Error Message      
@@ -247,7 +490,7 @@ none
 | Name          | Type          | Required       |   Description
 | ------------- |-------------  |-------------   | -----
 | id (path)     | string        |       x        |ID of the offer to be rated 
-| body (body)   | object        |      x         |```{```<br>```"session_id": 1,```<br>``` "user_id": 1```<br>```}```
+| body (body)   | object        |      x         | Authentication object```{```<br>&nbsp;&nbsp;&nbsp;```"session": { ```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``` "session_id": "eef88333-2118-4f2e-950c-444f2a31da10", ```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``` "user_id": "eef88333-2118-4f2e-950c-444f2a31da10" ```<br>&nbsp;&nbsp;&nbsp;```}```<br>```}```
 
 ### Success Responses
 
@@ -255,6 +498,42 @@ none
 | ------------- |---------------------  |-------------
 | 200           | OK                    | 
 
+Example response:
+```javascript
+{
+    "offer_id": "eef88333-2118-4f2e-950c-444f2a31da10",
+    "title": "Title of the offer",
+    "description": "Description of the offer (up to 500 chars)",
+    "number_of_ratings": 1,
+    "rating": 5.0,
+    "price": 12.25,
+    "category": {
+        "name": "Electronics",
+        "category_id": 1,
+        "picture_link": "/link/to/image/"
+    },
+    "picture_links": [
+      "/link/to/image/",
+      "/link/to/image/"
+    ],
+    "lessor": {
+        "first_name": "Name",
+        "last_name": "Name",
+        "user_id": "eef88333-2118-4f2e-950c-444f2a31da10",
+        "post_code": "1067",
+        "city": "Dresden",
+        "verified": false,
+        "lessor_rating": 4.1,
+        "number_of_lessor_ratings": 20
+    },
+    "blocked_dates": [
+        {
+            "from_date": "2021-04-23T00:00:00.000Z",
+            "to_date": "2021-04-23T00:00:00.000Z"
+        }
+    ]
+}
+```
 ### Error 
 
 | Code          | Description           | Error Message      
@@ -272,13 +551,26 @@ none
 | Name          | Type          | Required       |   Description
 | ------------- |-------------  |-------------   | -----
 | id (path)     | string        |       x        |ID of the offer to be rated 
-| body (body)   | object        |      x         |```{```<br>```"session_id":1, ```<br>```"user_id":1,```<br>``` "message": `Heyhoooooooo`,```<br>``` "date_range":[{```<br>```"from_date": "2021-04-23T00:00:00.000Z",```<br>``` "to_date": "2021-04-23T00:00:00.000Z"}]```<br>```} ```
+| body (body)   | object        |      x         | ```{```<br>&nbsp;&nbsp;&nbsp;```"session": { ```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``` "session_id": "eef88333-2118-4f2e-950c-444f2a31da10", ```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``` "user_id": "eef88333-2118-4f2e-950c-444f2a31da10" ```<br>&nbsp;&nbsp;&nbsp;```},```<br>&nbsp;&nbsp;&nbsp;```"message": "message",```<br>&nbsp;&nbsp;&nbsp;```"date_range": {```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```"from_date": "2021-04-23T00:00:00.000Z",```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```"to_date": "2021-04-23T00:00:00.000Z"```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```}```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```}```
 
 ### Success Responses
 
 | Code          | Description           | Response      
 | ------------- |---------------------  |-------------
 | 200           | OK                    | 
+
+Response example:
+```javascript
+{
+	"request_id": "eef88333-2118-4f2e-950c-444f2a31da10",
+	"user_id": "eef88333-2118-4f2e-950c-444f2a31da10",
+	"offer_id": "eef88333-2118-4f2e-950c-444f2a31da10",
+	"status_id": 1,
+	"from_date": "2021-04-23T00:00:00.000Z",
+	"to_date": "2021-04-23T00:00:00.000Z",
+	"message": "message"
+	}
+```
 
 ### Error 
 
@@ -297,7 +589,7 @@ none
 | Name          | Type          | Required       |   Description
 | ------------- |-------------  |-------------   | -----
 | id (path)     | string        |       x        |ID of the offer to be rated 
-| body (body)   | object        |      x         |```{```<br>```"session_id":1, ```<br>```  "user_id":1,```<br>```"rating": 4.5```<br>```} ```
+| body (body)   | object        |      x         | ```{```<br>&nbsp;&nbsp;&nbsp;```"session": { ```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``` "session_id": "eef88333-2118-4f2e-950c-444f2a31da10", ```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``` "user_id": "eef88333-2118-4f2e-950c-444f2a31da10" ```<br>&nbsp;&nbsp;&nbsp;```},```<br>&nbsp;&nbsp;&nbsp;```"rating": 4.5```<br>```}```
 
 ### Success Responses
 
@@ -305,6 +597,42 @@ none
 | ------------- |---------------------  |-------------
 | 200           | OK                    | 
 
+Example response:
+```javascript
+{
+    "offer_id": "eef88333-2118-4f2e-950c-444f2a31da10",
+    "title": "Title of the offer",
+    "description": "Description of the offer (up to 500 chars)",
+    "number_of_ratings": 1,
+    "rating": 5.0,
+    "price": 12.25,
+    "category": {
+        "name": "Electronics",
+        "category_id": 1,
+        "picture_link": "/link/to/image/"
+    },
+    "picture_links": [
+      "/link/to/image/",
+      "/link/to/image/"
+    ],
+    "lessor": {
+        "first_name": "Name",
+        "last_name": "Name",
+        "user_id": "eef88333-2118-4f2e-950c-444f2a31da10",
+        "post_code": "1067",
+        "city": "Dresden",
+        "verified": false,
+        "lessor_rating": 4.1,
+        "number_of_lessor_ratings": 20
+    },
+    "blocked_dates": [
+        {
+            "from_date": "2021-04-23T00:00:00.000Z",
+            "to_date": "2021-04-23T00:00:00.000Z"
+        }
+    ]
+}
+```
 ### Error
 
 | Code          | Description           | Error Message      
