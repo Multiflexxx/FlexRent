@@ -28,7 +28,7 @@ Offer:<a name="offer_object"></a>
         post_code: string,
         city: string,
         verified: boolean,
-        lessor_rating: number
+        lessor_rating: number,
         number_of_lessor_ratings: number
     } 
 }
