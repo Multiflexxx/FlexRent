@@ -45,6 +45,19 @@ Category:<a name="category_object"></a>
 }
 ```
 
+Request:<a name="request_object"></a>
+```javascript
+{
+    request_id: string,
+    user: User,
+    offer: Offer,
+    status_id: number,
+    from_date: Date,
+    to_date: Date,
+    message: string
+}
+```
+
 User:<a name="user_object"></a>
 ```javascript
 {
@@ -560,16 +573,65 @@ Example response:
 | 200           | OK                    | 
 
 Response example:
+[Request](#request_object)
 ```javascript
 {
-	"request_id": "eef88333-2118-4f2e-950c-444f2a31da10",
-	"user_id": "eef88333-2118-4f2e-950c-444f2a31da10",
-	"offer_id": "eef88333-2118-4f2e-950c-444f2a31da10",
-	"status_id": 1,
-	"from_date": "2021-04-23T00:00:00.000Z",
-	"to_date": "2021-04-23T00:00:00.000Z",
-	"message": "message"
-	}
+    "request_id": "ef88333-2118-4f2e-950c-444f2a31da10",
+    "user": {
+        "user_id": "ef88333-2118-4f2e-950c-444f2a31da10",
+        "first_name": "Name",
+        "last_name": "Name",
+        "verified": true,
+        "place_id": 8952,
+        "lessee_rating": 0,
+        "number_of_lessee_ratings": 0,
+        "lessor_rating": 0,
+        "number_of_lessor_ratings": 0,
+        "email": "mail@test.com",
+        "phone_number": "123456789",
+        "street": "Street",
+        "house_number": "4",
+        "date_of_birth": "2020-06-12T22:00:00.000Z",
+        "post_code": "01234",
+        "city": "City"
+    },
+    "offer": {
+        "offer_id": "ef88333-2118-4f2e-950c-444f2a31da10",
+        "title": "Title",
+        "description": "Description",
+        "number_of_ratings": 1,
+        "rating": 5.0,
+        "price": 12.25,
+        "category": {
+            "name": "Category 1",
+            "category_id": 1,
+            "picture_link": "picture_link"
+        },
+        "picture_links": [
+            "/path/to/image/"
+        ],
+        "lessor": {
+            "first_name": "Name",
+            "last_name": "Name",
+            "user_id": "ef88333-2118-4f2e-950c-444f2a31da10",
+            "post_code": "1067",
+            "city": "City",
+            "verified": false,
+            "lessor_rating": 5.0,
+            "number_of_lessor_ratings": 20
+        },
+        "blocked_dates": [
+            {
+                "from_date": "2021-04-22T22:00:00.000Z",
+                "to_date": "2021-04-22T22:00:00.000Z"
+            }
+        ]
+    },
+    "status_id": 1,
+    "from_date": "2021-05-01T00:00:00.000Z",
+    "to_date": "2021-05-01T00:00:00.000Z",
+    "message": "Message"
+}
 ```
 
 ### Error 
