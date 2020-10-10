@@ -54,7 +54,8 @@ Request:<a name="request_object"></a>
     status_id: number,
     from_date: Date,
     to_date: Date,
-    message: string
+    message: string,
+    qr_code_id: string
 }
 ```
 
