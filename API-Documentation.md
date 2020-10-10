@@ -52,8 +52,10 @@ Request:<a name="request_object"></a>
     user: User,
     offer: Offer,
     status_id: number,
-    from_date: Date,
-    to_date: Date,
+    date_range: {
+        from_date: Date,
+        to_date: Date
+    },
     message: string,
     qr_code_id: string
 }
@@ -629,8 +631,10 @@ Response example:
         ]
     },
     "status_id": 1,
-    "from_date": "2021-05-01T00:00:00.000Z",
-    "to_date": "2021-05-01T00:00:00.000Z",
+    "date_range": {
+        "from_date": "2021-05-01T00:00:00.000Z",
+        "to_date": "2021-05-01T00:00:00.000Z",
+    },
     "message": "Message"
 }
 ```
