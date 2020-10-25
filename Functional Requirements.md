@@ -29,7 +29,7 @@ In der Übersicht/ in der Liste der Produkte sollte dabei jedoch nur diese Infor
 
 ### Funktion 2
 Hauptfuntkionalität: Suchen nach einem Produkt/ einer Kategorie
-Beschreibung: Auf der Hauptseite sollte eine Suchleiste sein, mit der gesucht werden kann. Diese sollte auch über einen eigenen Tab zugreifbar sein. Bei Eingabe eines Suchbegriffes sollen relevante Artikel angezeigt werden. Die Suche sollte dabei auf einen Suchradius begrenzt sein, der oben unter der Suchleiste eingestellt werden kann. Wird ein passender Artikel nicht gefunden, so soll nach ähnlichen Produkten gesucht werden oder eine Kategorie vorgeschlagen werden. Bereits gesuchte Begriffe sollen gespeichert und bei erneuter Eingabe vorgeschlagen werden. Auch sollen Vorschläge für noch nicht beendete Suchbegriffe angezeigt werden. Außerdem soll es eine Kategorieseite geben, auf welcher verschiedene Kategorien angezeigt werden. Wenn auf eine Kategorie geklickt wird, sollen nur Produkte dieser Kategorie angezeigt werden in einem Festgelegten umkreis, den der Benutzer oben festlegen kann.
+Beschreibung: Auf der Hauptseite und der Kategorieseite sollte eine Suchleiste sein, mit der gesucht werden kann. Bei Eingabe eines Suchbegriffes sollen relevante Artikel angezeigt werden. Die Suche sollte dabei auf einen Suchradius begrenzt sein, der oben unter der Suchleiste eingestellt werden kann. Wird ein passender Artikel nicht gefunden, so soll nach ähnlichen Produkten gesucht werden oder eine Kategorie vorgeschlagen werden. Bereits gesuchte Begriffe sollen gespeichert und bei erneuter Eingabe vorgeschlagen werden. Auch sollen Vorschläge für noch nicht beendete Suchbegriffe angezeigt werden. Außerdem soll es eine Kategorieseite geben, auf welcher verschiedene Kategorien angezeigt werden. Wenn auf eine Kategorie geklickt wird, sollen nur Produkte dieser Kategorie angezeigt werden in einem Festgelegten umkreis, den der Benutzer oben festlegen kann.
 
 ### Funtkion 3
 Hautpfunktionalität: Vorschläge / Home Seite
@@ -53,11 +53,11 @@ Beschreibung: Wenn eine Mietanfrage eines Mieters vom Vermieter bestätigt wurde
 
 ### Funktion 6
 Hauptfunktionalität: Abholung und Bezahlung eines Produkts
-Beschreibung: Wenn ein Mieter eine Buchung durchgeführt hat, dann kann der Mieter zum Vermieter fahren, um das Produkt abzuholen und den Mietbetrag zu bezahlen. Wenn der Mieter vor Ort ist (oder auch vorher), kann der Mieter über die App bezahlen und somit einen QR Code freischalten. Dieser QR Code kann bei der Abholung benutzt werden, um dem Vermieter zu bestätigen, dass der Mieter bezahlt hat. Dieser QR Code kann als bestätigung vom Vermieter gescannt werden, um damit im System einzutragen, dass der Mieter den Gegenstand abgeholt hat und somit er in dem besitz des Mieters ist. Beide Teilnehmer kriegen eine Bestätigung, dass alles geklappt hat. Die Zahlung findet über PayPal oder ein anderes Online-Zahlungsmittel statt, eine Bargeldzahlung ist aus betrugszwecken nicht erlaubt.
+Beschreibung: Wenn ein Mieter eine Buchung durchgeführt hat, dann kann der Mieter zum Vermieter fahren, um das Produkt abzuholen und den Mietbetrag zu bezahlen. Wenn der Mieter vor Ort ist (oder auch vorher), kann der Mieter über die App bezahlen und somit einen QR Code freischalten. Dieser QR Code kann bei der Abholung benutzt werden, um dem Vermieter zu bestätigen, dass der Mieter bezahlt hat. Dieser QR Code kann als bestätigung vom Vermieter gescannt werden, um damit im System einzutragen, dass der Mieter den Gegenstand abgeholt hat und somit er in dem besitz des Mieters ist. Beide Teilnehmer erhalten eine Bestätigung, dass alles geklappt hat. Die Zahlung findet über PayPal oder ein anderes Online-Zahlungsmittel statt, eine Bargeldzahlung ist aus Betrugszwecken nicht erlaubt.
 
 ### Funktion 7
 Hauptfunktionalität: Zurückgabe eines Produkts
-Beschreibung: Nachdem die Mietdauer abgeschlossen ist, soll der Mieter eine Push Benachrichtigung bekommen, dass es Zeit ist, den gegenstand zurück zu geben. Hier soll dem Mieter dann wieder in seiner Buchungsübersicht angezeigt werden, dass es Zeit ist, das Produkt zurückzugeben. Auch soll hier nochmal die Addresse angezeigt werden, an die zurück gegeben werden soll. Bei der Rückgabe treffen sich beide Teilnehmer noch einmal und der Mieter kann einen QR Code vom Vermieter scannen, um zu bestätigen, dass das Produkt zurück gegeben wurde. Erst dann ist die Buchung beendet und die Buchung wird in der Historie angezeigt. Von der historie aus kann man ggf nochmal auf die Produktseite zurück und seine ausgaben im überblick behalten.
+Beschreibung: Nachdem die Mietdauer abgeschlossen ist, soll der Mieter eine Push Benachrichtigung bekommen, dass es Zeit ist, den Gegenstand zurück zu geben. Hier soll dem Mieter dann wieder in seiner Buchungsübersicht angezeigt werden, dass es Zeit ist, das Produkt zurückzugeben. Auch soll hier nochmal die Addresse angezeigt werden, an die zurück gegeben werden soll. Bei der Rückgabe treffen sich beide Teilnehmer noch einmal und der Mieter kann einen QR Code vom Vermieter scannen, um zu bestätigen, dass das Produkt zurück gegeben wurde. Erst dann ist die Buchung beendet und die Buchung wird in der Historie angezeigt. Von der historie aus kann man ggf nochmal auf die Produktseite zurück und seine ausgaben im überblick behalten.
 
 ### Funktion 8
 Hauptfunktionalität: Bewertungsfunktion
@@ -73,9 +73,6 @@ Beschreibung: Der Benutzer soll einige Einstellungen treffen können. Diese Bein
     * Handynummer
 * Zahlungsinformationen
     * Zahlungsinformationen
-* Mein Karma-Score
-    * Informationen zu Karma
-    * Bewertungen
 * App-Einstellungen
     * Light-Mode/Dark-Mode
 * Abmelden
@@ -93,7 +90,7 @@ Beschreibung: Ein Benutzer soll sich registrieren können. Dabei muss ein Benutz
     * Postleitzahl
     * Ort
     * Land (Nur Deutschland möglich)
-* Telefonnummer oder
+* Telefonnummer
 * E-Mail adresse
 * Passwort
 
