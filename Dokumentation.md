@@ -1,5 +1,45 @@
  # Plattformen und Frameworks – Flexrent
 
+## Idee:
+Du brauchst eine Bohrmaschine oder eine Musikbox aber nur für eine kurze Zeit brauchst sie nur dafür dann bist du auf Flexrent genau richtig. Wir wollen eine Plattform bieten auf der Gegenstände von Privatperson zu Privatperson zu vermietet werden können. Die Mobile App ermöglicht es den Nutzern Gegenstände zu vermieten und Gegenstände zu mieten. Dafür genügt die Erstellung eines Profils. 
+
+FlexRent bietet einen Marktplatz für Privatpersonen, die selten genutzte Gegenstände leihen oder verleihen möchten. Durch FlexRent besteht die Möglichkeit Gegestände, die ansonsten verstauben, zu Geld zu machen. Eine teuere Heckenschere, die nur einmal im Jahr benötigt wird kann hier für andere Menschen angeboten werden. Andererseits können Nutzer Gegenstände die sie für einen bestimmten Zeitpunkt benötigen mieten und sparen sich das Geld für eine Neuanschaffung. 
+
+Die App bietet das eanbieten und das leichte finden von Gegenständen in der Nähe. Die Vermieter können selbst Zeiträume bestimmen, an denen er den Gegenstand nicht benötigt. Zudem hat er die Möglichkeit den Preis, Bilder und eine Beschreibung des Gegenstandes anzufertigen. 
+
+Diese Gegensände können von den Mietern gefunden werden. Vermieter erhalten Bewertungen von den Mietern. So haben Mieter die Möglichkeit zuverlässige Vermieter zu finden. 
+
+Der Mietprozess wird durch die App vereinfacht gestaltet. Der Mieter sucht sich den passenden Gegenstand und startet eine Mietanfrage. Wenn der Vermieter diese Anfrage annimmt kann der Mieter den Gegenstand bei dem Vermieter abholen.  
+
+In Flexrent wird die Kamera als Vorteil einer Mobilenanwendung verwendet, um QR Codes beim Abholen und Zurückbringen des Gegenstandes zu scannen. Damit stellen wir sicher, welche Person im Besitz des Gegenstandes ist, da beide Nutzer mit dem QR Code interagieren müssen. Beim Verleihen wird der QR Code auf der Seite des Mieters erzeugt. Der Vermieter Scannt diesen. Bei der Rückgabe ist es umgekehrt.  
+
+
+## Technologien 
+# Flutter 
+# Typescript
+
+## Backend
+[Backend](https://github.com/Multiflexxx/server-flex-rent)
+## Frontend
+[Frontend](https://github.com/Multiflexxx/client-flex-rent)
+
+
+
+## Lizenz
+
+## Die Zukunft von Flexrent
+- Chat 
+- Lightmode
+- Nutzungsbedingungen 
+- Rechltiche Absicherung
+- Webseite 
+	- WErbung
+	- weiterleiten auf die App
+- Tutorial beim ersten Starten der App
+- Teilen der App durch link in der App
+
+	
+
 ## Marketing:
 - Werbung über Youtube, Instagram auf gezielte Zielgruppen:
 	- Junge investoren (Finanzkanäle)
