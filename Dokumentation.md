@@ -2,14 +2,18 @@
  
 # Inhaltsverzeichnis
 1) [Idee](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#idee)
-2) [Technologien](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#technologien)
-2.1) [Flutter](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#flutter)
-2.2) [Typescript](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#typescript)
-2.3) [NestJs](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#nestjs)
-2.4) [MariaDB](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#mariadb)
-2.5) [Google Geolocations API](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#google-geo-locations-api)
-3) [Frontend](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#frontend)
-4) [Backend](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#backend)
+2) [Technologien](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#technologien)<br>
+2.1) [Flutter](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#flutter)<br>
+2.2) [Typescript](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#typescript)<br>
+2.3) [NestJs](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#nestjs)<br>
+2.4) [MariaDB](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#mariadb)<br>
+2.5) [Google Geolocations API](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#google-geo-locations-api)<br>
+3) [Frontend](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#frontend)<br>
+3.1) [Repository](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#repository)<br>
+4) [Backend](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#backend)<br>
+4.1) [Repository](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#repository-1)<br>
+4.2) [Verwendete Technologien](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#verwendete-technologien)<br>
+4.3) [Vorgehen & Erklärungen](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#vorgehen-und-erk%C3%A4rungen)<br>
 5) [Lizenz](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#lizenz)
 6) [Ausblick für die Zukunft](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#die-zukunft-von-flexrent)
 7) [Marketing](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#marketing)
