@@ -3,6 +3,11 @@
 # Inhaltsverzeichnis
 1) [Idee](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#idee)
 2) [Technologien](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#technologien)
+2.1) [Flutter](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#flutter)
+2.2) [Typescript](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#typescript)
+2.3) [NestJs](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#nestjs)
+2.4) [MariaDB](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#mariadb)
+2.5) [Google Geolocations API](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#google-geo-locations-api)
 3) [Frontend](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#frontend)
 4) [Backend](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#backend)
 5) [Lizenz](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#lizenz)
@@ -33,10 +38,34 @@ In Flexrent wird die Kamera als Vorteil einer Mobilenanwendung verwendet, um QR 
 ### Google Geo Locations API
 
 ## Frontend
+### Repository
 [Frontend Repository](https://github.com/Multiflexxx/client-flex-rent)
 
 ## Backend
+### Repository
 [Backend Repository](https://github.com/Multiflexxx/server-flex-rent)
+
+### Verwendete Technologien
+- NestJS für die Businesslogik
+- MariaDB als Datenbank
+- Google Geolocations API um die geokoordinaten der Postleitzahlen zu erlangen
+- JSON zur Kommunikation mit der APP
+
+### Vorgehen und Erkärungen
+Der Backendcode gliedert sich in einzelne Module, die jeweils einen Controller, einen Service und verschiedene Models beinhalten.
+Das Backend teilt sich dabei in die Überkategorien `User` und `Offer`.
+Das Usermodul kümmert sich um alle Anfragen, die etwas mit Benutzern zu tun haben. Hier können Nutzer erstellt, geupdated, verifiziert und gelöscht werden.
+Das Offermodul kümmertsich darum, dass Nutzer Angebote einstellen, ändern, suchen, löschen und buchen können. Zusätzlich kümmert es sich um den kompletten Verleihprozess.
+Das Offermodul greift zur verifizierung der Benutzer auf das Usermodul zu. So kann duplicated code vermieden werden und ein separation of concerns erreicht werden.
+Beide Module besitzen gemeinsam verwendete Hilfsfunktionen, die die Kommunikation mit der Datenbank und das Schreiben und Lesen von Dateien von Festplattendaten ermöglichen. Die Hilfsfunktionen sind dabei statisch.
+Statt Objekten werden Interfaces zum Internen Datenaustausch verwendet, dadurch wird vermieden, dass Objekte bei jeder Benutzung neu instanziiert werden müssen.
+Asynchrone Aufrufe werden mit dem Promise-Konzept gehandlet, da dies eine bessere Lesbarkeit bietet als Callbackfunctions.
+
+Eine Besonderheit ist die Handhabung der Lokationen der Angebote:
+Um zu gewährleisten, dass Nutzer nur Angebote in ihrer Nähe finden sind die Angebote mit der Postleitzahl des Verleihers verknüpft.
+Da es schwierig ist jedes Mal alle Distanzen zum Mieter neu zu berechnen haben wir uns dazu entschieden die Distanz von jeder Stadt zu jeder anderen Stadt vorher zu berechnen und in einer Tabelle abzuspeichern. Mit unseren ~13.000 Postleitzahlen erhalten wir daher eine Tabelle mit Distanzen mit ~169.000.000 Einträgen.
+Die Suche durch diese Tabelle ist jedoch deutlich schneller (ein paar Millisekunden) als die Neuberechnung bei jeder Suche.
+Um die Geokoordinaten der einzelnen Städte zu erhalten wurde die Google Maps Geolocation API verwendet. Zu jeder Postleitzahl aus unserer Tabelle (die eigentlich zur Verifikation der Nutzereingaben dient) haben wir die Latitude und die Longitude mit der Google API gesucht.
 
 ## Lizenz
 
@@ -44,19 +73,19 @@ In Flexrent wird die Kamera als Vorteil einer Mobilenanwendung verwendet, um QR 
 - Chat 
 - Lightmode
 - Nutzungsbedingungen 
-- Rechltiche Absicherung
+- Rechtliche Absicherung
 - Webseite 
 	- Werbung
-	- weiterleiten auf die App
+	- Weiterleiten auf die App
 - Tutorial beim ersten Starten der App
 - Teilen der App durch link in der App
 
 ## Marketing:
 - Werbung über Youtube, Instagram auf gezielte Zielgruppen:
-	- Junge investoren (Finanzkanäle)
+	- Junge Investoren (Finanzkanäle)
 	- Tech begeisterte (MKBHD…)
 	-…
-- Werbung und Supportstruktur über social media kanäle
+- Werbung und Supportstruktur über social media Kanäle
 - Sponsoring von YouTube Kanälen
 
 ## Rechtliche Grundlagen:
