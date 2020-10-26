@@ -26,14 +26,17 @@ In Flexrent wird die Kamera als Vorteil einer Mobilenanwendung verwendet, um QR 
 
 
 ## Technologien 
-# Flutter 
-# Typescript
+### Flutter 
+### Typescript
+### NestJs
+### MariaDB
+### Google Geo Locations API
 
 ## Frontend
-[Frontend](https://github.com/Multiflexxx/client-flex-rent)
+[Frontend Repository](https://github.com/Multiflexxx/client-flex-rent)
 
 ## Backend
-[Backend](https://github.com/Multiflexxx/server-flex-rent)
+[Backend Repository](https://github.com/Multiflexxx/server-flex-rent)
 
 ## Lizenz
 
