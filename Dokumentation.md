@@ -1,4 +1,15 @@
  # Plattformen und Frameworks – Flexrent
+ 
+# Inhaltsverzeichnis
+1) [Idee](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#idee)
+2) [Technologien](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#technologien)
+3) [Frontend](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#frontend)
+4) [Backend](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#backend)
+5) [Lizenz](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#lizenz)
+6) [Ausblick für die Zukunft](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#die-zukunft-von-flexrent)
+7) [Marketing](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#marketing)
+8) [Rechtliches](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#rechtliche-grundlagen)
+
 
 ## Idee:
 Du brauchst eine Bohrmaschine oder eine Musikbox aber nur für eine kurze Zeit brauchst sie nur dafür dann bist du auf Flexrent genau richtig. Wir wollen eine Plattform bieten auf der Gegenstände von Privatperson zu Privatperson zu vermietet werden können. Die Mobile App ermöglicht es den Nutzern Gegenstände zu vermieten und Gegenstände zu mieten. Dafür genügt die Erstellung eines Profils. 
@@ -18,12 +29,11 @@ In Flexrent wird die Kamera als Vorteil einer Mobilenanwendung verwendet, um QR 
 # Flutter 
 # Typescript
 
-## Backend
-[Backend](https://github.com/Multiflexxx/server-flex-rent)
 ## Frontend
 [Frontend](https://github.com/Multiflexxx/client-flex-rent)
 
-
+## Backend
+[Backend](https://github.com/Multiflexxx/server-flex-rent)
 
 ## Lizenz
 
@@ -33,12 +43,10 @@ In Flexrent wird die Kamera als Vorteil einer Mobilenanwendung verwendet, um QR 
 - Nutzungsbedingungen 
 - Rechltiche Absicherung
 - Webseite 
-	- WErbung
+	- Werbung
 	- weiterleiten auf die App
 - Tutorial beim ersten Starten der App
 - Teilen der App durch link in der App
-
-	
 
 ## Marketing:
 - Werbung über Youtube, Instagram auf gezielte Zielgruppen:
@@ -47,6 +55,7 @@ In Flexrent wird die Kamera als Vorteil einer Mobilenanwendung verwendet, um QR 
 	-…
 - Werbung und Supportstruktur über social media kanäle
 - Sponsoring von YouTube Kanälen
+
 ## Rechtliche Grundlagen:
 - Mit einem Leihvertrag wird eine Sache (kein Recht) gemäß §§ 598 bis 606 BGB unentgeltlich zum Gebrauch überlassen. Beim Ausleihen einer Sache geht der Verleiher im Alltag davon aus, dass die Sache auch zurückgegeben wird, zu Recht: Nach Ablauf der Leihzeit oder durch vorzeitige Vertragskündigung durch eine der Parteien muss der Entleiher dem Verleiher die entliehene Sache zurückgeben. Während der Leihzeit ist die entliehene Sache vom Entleiher ausschließlich vertragsgemäß zu gebrauchen; eine Weitergabe an Dritte ist nach § 603 BGB untersagt. Der Entleiher haftet nicht für Abnutzungen und Verschlechterungen an der Sache, die durch einen ordnungs- und vertragsgemäßen Gebrauch auftreten; bei einem nicht vertragsgemäßen Gebrauch richtet sich die Haftung jedoch nach dem allgemeinen Schadensersatzrecht. Bei einer Leihe handelt es sich rechtlich um einen unvollkommen zweiseitigen Vertrag; der Verleiher ist zur entgeltfreien Leihgabe über den vereinbarten Zeitraum verpflichtet, der Entleiher zum sachgemäßen Umgang mit der Sache und die fristgemäße Rückgabe derer verpflichtet.
 -  Häufig wird der Leihvertrag auch als Gebrauchsüberlassung bezeichnet.
