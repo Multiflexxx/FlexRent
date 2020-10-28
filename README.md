@@ -16,5 +16,14 @@
 
 [Zur API Dokumentation](https://github.com/Multiflexxx/FlexRent/blob/master/API-Documentation.md)
 
+## Team
+- [Marleen Benner](https://github.com/MarleenBenner)
+- [Tristan Emig](https://github.com/TristanMrb)
+- [Benno Grimm](https://github.com/Grimmig18)
+- [Tizian Groß](https://github.com/tizian123)
+- [Marcel Mertens](https://github.com/NerdyStuff)
+- [Anton Ochel](https://github.com/Tony1704)
+- [Anna-Lena Richert](https://github.com/aalenaa)
+
 ## Useful Links:
 [NativeScript Docs](https://docs.nativescript.org/angular/start/quick-setup)
