@@ -23,6 +23,7 @@
 4.1) [Repository](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#repository-1)<br>
 4.2) [Verwendete Technologien](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#verwendete-technologien-1)<br>
 4.3) [Vorgehen & Erklärungen](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#vorgehen-und-erk%C3%A4rungen)<br>
+4.4) [API](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#die-api)<br>
 5) [Lizenz](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#lizenz)
 6) [CI/CD](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#cicd)
 7) [Ausblick für die Zukunft](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#die-zukunft-von-flexrent)
@@ -99,6 +100,13 @@ Um zu gewährleisten, dass Nutzer nur Angebote in ihrer Nähe finden sind die An
 Da es schwierig ist jedes Mal alle Distanzen zum Mieter neu zu berechnen haben wir uns dazu entschieden die Distanz von jeder Stadt zu jeder anderen Stadt vorher zu berechnen und in einer Tabelle abzuspeichern. Mit unseren ~13.000 Postleitzahlen erhalten wir daher eine Tabelle mit Distanzen mit ~169.000.000 Einträgen.
 Die Suche durch diese Tabelle ist jedoch deutlich schneller (ein paar Millisekunden) als die Neuberechnung bei jeder Suche.
 Um die Geokoordinaten der einzelnen Städte zu erhalten wurde die Google Maps Geocoding API verwendet. Zu jeder Postleitzahl aus unserer Tabelle (die eigentlich zur Verifikation der Nutzereingaben dient) haben wir die Latitude und die Longitude mit der Google API gesucht.
+
+### Die API
+Für die verbindung zum Frontend haben wir uns für einen REST-API entschieden.
+Die HTTP-Methoden lassen sich optimal auf die CRUD-Methoden für relationale Datenbanken Mappen, was ein einfacheres Verständis der Vorgänge ermöglicht.
+NestJs bietet zusätzlich für die Entwicklung von REST-APIs viele nützliche Features wie z.B. die Dekoratoren in den Controllern.
+Das Error-Handling von NestJS ermöglicht es zudem leicht HTTP-Fehlercodes auszugeben. Eine ausführlichere Dokumentation der API kann in der [API Dokumentation](https://github.com/Multiflexxx/FlexRent/blob/master/API-Documentation.md) gefunden werden.
+Wir haben uns gegen die Verwendung von Swagger in Verwendung mit NestJS entschieden, da bereits ein erster Versuch in Nutzung der Dokumentationsfunktion keine brauchbaren Ergebnisse lieferte.
 
 ## CI/CD
 Sowohl das Frontend als auch das Backend verwenden verwenden GithubActions für einen automatisierten Deploymentprozess.
