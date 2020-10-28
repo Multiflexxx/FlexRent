@@ -1,6 +1,7 @@
 # FlexRent
-
-<img alt="Flexrent Logo" width="30%" height="auto" src="https://raw.githubusercontent.com/Multiflexxx/FlexRent/master/Logo/PNG/HighResolution/Logo_purple_no_background.png">
+<p align="center">
+  <img alt="Flexrent Logo" width="30%" height="auto" src="https://raw.githubusercontent.com/Multiflexxx/FlexRent/master/Logo/PNG/HighResolution/Logo_purple_no_background.png">
+</p>
 
 ## Releases
 <p align="center">
