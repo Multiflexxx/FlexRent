@@ -1,5 +1,12 @@
- # Plattformen und Frameworks – Flexrent
- 
+# Plattformen und Frameworks – Flexrent
+
+<p align="center">
+  <img alt="Flexrent Logo" width="30%" height="auto" src="https://raw.githubusercontent.com/Multiflexxx/FlexRent/master/Logo/PNG/HighResolution/Logo_purple_no_background.png"><br><br>
+  <img src="https://badgen.net/github/tag/Multiflexxx/client-flex-rent/?color=purple">
+  <img src="https://badgen.net/github/release/Multiflexxx/client-flex-rent/?color=pink"><br>
+  <a href="https://flexrent.multiflexxx.de/BuildApp/Releases/flexrent.apk"><img alt="Lade die App herunter" src="https://badgen.net/badge/Download/Lade_die_App_herunter/?color=blue"></a>
+</p>
+
 # Inhaltsverzeichnis
 1) [Idee](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#idee)
 2) [Technologien](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#technologien)<br>
@@ -7,7 +14,8 @@
 2.2) [Typescript](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#typescript)<br>
 2.3) [NestJs](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#nestjs)<br>
 2.4) [MariaDB](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#mariadb)<br>
-2.5) [Google Geolocations API](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#google-geo-locations-api)<br>
+2.5) [Docker](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#docker)<br>
+2.6) [Google Geolocations API](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#google-geocoding-api)<br>
 3) [Frontend](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#frontend)<br>
 3.1) [Repository](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#repository)<br>
 4) [Backend](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#backend)<br>
@@ -15,9 +23,10 @@
 4.2) [Verwendete Technologien](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#verwendete-technologien)<br>
 4.3) [Vorgehen & Erklärungen](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#vorgehen-und-erk%C3%A4rungen)<br>
 5) [Lizenz](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#lizenz)
-6) [Ausblick für die Zukunft](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#die-zukunft-von-flexrent)
-7) [Marketing](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#marketing)
-8) [Rechtliches](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#rechtliche-grundlagen)
+6) [CI/CD]()
+7) [Ausblick für die Zukunft](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#die-zukunft-von-flexrent)
+8) [Marketing](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#marketing)
+9) [Rechtliches](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#rechtliche-grundlagen)
 
 
 ## Idee:
@@ -38,12 +47,29 @@ In Flexrent wird die Kamera als Vorteil einer Mobilenanwendung verwendet, um QR 
 ### Flutter 
 ### Typescript
 ### NestJs
+
 ### MariaDB
-### Google Geo Locations API
+MariaDB ist ein Open-Source Datenbankmanagementsystem für relationale Datenbanken, welches als Fork aus MySQL entstand.
+Der Open-Source-Ansatz ist für unsere Anwendung praktisch, da keine Lizenzgebühren gezahlt werden müssen.
+Weitere Informationen finden sich auf der [Webseite der MariaDB Foundation](https://mariadb.org/documentation/).
+
+### Docker
+Die Containervirtualisierungssoftware Docker hilft uns dabei mehrere Prozesse isoliert voneinander auf einem Server laufen zu lassen.
+So nutzen wir verschiedene Container um unsere API bereitzustellen, neue App Versionen zu kompilieren und den Datenbankserver bereitzustellen.
+Weiter Informationen zu Docker finden sich auf der [Webseite von Docker](https://www.docker.com/).
+
+### Google Geocoding API
+Die Geocoding API gibt Konvertiert gegebene Daten wie Straße, Hausnummer, Postleitzahl und Stadt in geographische Koordinaten.
+Diese Koordinaten können dann verwendet werden, um zum Beispiel die Distanz zwischen zwei Punkten auf der Welt zu bererechnen.
+Weitere Informationen finden sich auf der [Webseite von Google](https://developers.google.com/maps/documentation/geocoding/overview).
 
 ## Frontend
 ### Repository
 [Frontend Repository](https://github.com/Multiflexxx/client-flex-rent)
+
+### Verwendete Technologien
+- Flutter für die Appentwicklung
+- CI/CD mit GithubActions
 
 ## Backend
 ### Repository
@@ -52,7 +78,9 @@ In Flexrent wird die Kamera als Vorteil einer Mobilenanwendung verwendet, um QR 
 ### Verwendete Technologien
 - NestJS für die Businesslogik
 - MariaDB als Datenbank
-- Google Geolocations API um die geokoordinaten der Postleitzahlen zu erlangen
+- Docker für die Containervirtualisierung
+- CI/CD mit GithubActions
+- Google Geocoding API um die Geokoordinaten der Postleitzahlen zu erlangen
 - JSON zur Kommunikation mit der APP
 
 ### Vorgehen und Erkärungen
@@ -69,7 +97,13 @@ Eine Besonderheit ist die Handhabung der Lokationen der Angebote:
 Um zu gewährleisten, dass Nutzer nur Angebote in ihrer Nähe finden sind die Angebote mit der Postleitzahl des Verleihers verknüpft.
 Da es schwierig ist jedes Mal alle Distanzen zum Mieter neu zu berechnen haben wir uns dazu entschieden die Distanz von jeder Stadt zu jeder anderen Stadt vorher zu berechnen und in einer Tabelle abzuspeichern. Mit unseren ~13.000 Postleitzahlen erhalten wir daher eine Tabelle mit Distanzen mit ~169.000.000 Einträgen.
 Die Suche durch diese Tabelle ist jedoch deutlich schneller (ein paar Millisekunden) als die Neuberechnung bei jeder Suche.
-Um die Geokoordinaten der einzelnen Städte zu erhalten wurde die Google Maps Geolocation API verwendet. Zu jeder Postleitzahl aus unserer Tabelle (die eigentlich zur Verifikation der Nutzereingaben dient) haben wir die Latitude und die Longitude mit der Google API gesucht.
+Um die Geokoordinaten der einzelnen Städte zu erhalten wurde die Google Maps Geocoding API verwendet. Zu jeder Postleitzahl aus unserer Tabelle (die eigentlich zur Verifikation der Nutzereingaben dient) haben wir die Latitude und die Longitude mit der Google API gesucht.
+
+## CI/CD
+Sowohl das Frontend als auch das Backend verwenden verwenden GithubActions für einen automatisierten Deploymentprozess.
+Bei einem Push auf unsere `releases`-Branches, wird jeweils eine GithubAction getriggert, die einen Endpoint auf unserem Server aufruft.
+Der Server zieht dann einen pull von Github und kompiliert die App mit Flutter, bzw. die API mit NestJS.
+Anschließend wird die App unter einem Link bereitgestellt bzw. die API mit den neuen Features bereitgestellt.
 
 ## Lizenz
 
