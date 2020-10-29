@@ -16,6 +16,7 @@
 2.4) [MariaDB](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#mariadb)<br>
 2.5) [Docker](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#docker)<br>
 2.6) [Google Geocoding API](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#google-geocoding-api)<br>
+2.7) [OAuth2](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#oauth2)<br>
 3) [Frontend](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#frontend)<br>
 3.1) [Repository](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#repository)<br>
 3.2) [Verwendete Technologien](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#verwendete-technologien)<br>
@@ -69,6 +70,9 @@ Weiter Informationen zu Docker finden sich auf der [Webseite von Docker](https:/
 Die Geocoding API gibt Konvertiert gegebene Daten wie Straße, Hausnummer, Postleitzahl und Stadt in geographische Koordinaten.
 Diese Koordinaten können dann verwendet werden, um zum Beispiel die Distanz zwischen zwei Punkten auf der Welt zu bererechnen.
 Weitere Informationen finden sich auf der [Webseite von Google](https://developers.google.com/maps/documentation/geocoding/overview).
+
+### OAuth2
+Wow toll
 
 ## Frontend
 ### Repository
