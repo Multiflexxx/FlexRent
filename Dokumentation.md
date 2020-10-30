@@ -11,8 +11,8 @@
 1) [Idee](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#idee)
 2) [Technologien](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#technologien)<br>
 2.1) [Flutter](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#flutter)<br>
-2.2) [Typescript](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#typescript)<br>
-2.3) [NestJS](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#nestjs)<br>
+2.2) [NestJS](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#nestjs)<br>
+2.3) [Typescript](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#typescript)<br>
 2.4) [MariaDB](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#mariadb)<br>
 2.5) [Docker](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#docker)<br>
 2.6) [Google Geocoding API](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#google-geocoding-api)<br>
@@ -50,11 +50,12 @@ In Flexrent wird die Kamera als Vorteil einer Mobilenanwendung verwendet, um QR 
 
 ### Flutter 
 
-### Typescript
-
 ### NestJs
 NestJS ist ein auf Node.js basierendes Framework, dass Javascript und Typescript unterstützt. NestJS nutzt HTTP Server Frameworks wie Express um möglichst robust zu funktionieren. Wir haben uns für NestJS entschieden, da wir die Unterstützung von Objektorientierung und Typsicherheit bevorzugen und der Typescriptsupport von NestJS sehr gut ist. Zusätzlich ist vorallem der Modulare Aufbau von NestJs gut, um ein separation of concerns zu erhalten.
 Weitere Informationen finden sich auch der [Webseite von NestJs](https://docs.nestjs.com/).
+
+### TypeScript
+Da wir mit der Festlegung auf NestJS bereits die Auswahl der möglichen Programmiersprachen auf Javascript und Typescribt eingrenzten, viel und die finale Festlegung auf Typescript recht leicht. Typescript ist eine auf Javascript basierende Programmiersprache, die im Gegesatz zu Javascript Typsicherheit erlaubt. Das macht es nicht nur einfacher mit der Programmiersprache zu arbeiten (siehe ausgefeilte Vorschläge mit z.B. IntelliSens von VS Code), sondern schützt auch uns Entwickler vor unseren eigenen Fehlern, die bei Javascript gerne mal so lange unter dem Radar fliegen, bis der node Server nur noch 500er Fehler wirft. Typescript schafft es dabei so nah an Javascript zu bleiben, dass die Lernkurve bei einem gewissen Grundlagenwissen in Javascript nach ein paar Minuten bereits erklommen sein kann.
 
 ### MariaDB
 MariaDB ist ein Open-Source Datenbankmanagementsystem für relationale Datenbanken, welches als Fork aus MySQL entstand.
@@ -72,7 +73,7 @@ Diese Koordinaten können dann verwendet werden, um zum Beispiel die Distanz zwi
 Weitere Informationen finden sich auf der [Webseite von Google](https://developers.google.com/maps/documentation/geocoding/overview).
 
 ### OAuth2
-Wow toll
+Ein User oder Resource Owner kann mit Hilfe des OAuth2 Protokolls einer Anwendung (Client) den Zugriff auf seine Daten erlauben, die von einem anderen Dienst (Resource Server) bereitgestellt werden, ohne geheime Details seiner Zugangsberechtigung dem Client preiszugeben. Beispielsweise kann ein User einem Dritten (in diesem Fall unserer App) erlauben, auf seine/ihre Daten auf Facebook, Google & co. zuzugreifen. Das erfolgt durch manuelle Bestätigung des Users bei der Registrierung (Sign up with Google/Apple/Facebook). Nach erfolgter Bestätigung erhalten wir einen Token, den wir benutzen können, um bei den APIs von Google/Apple/Facebook Informationen über den User aufzurufen, und zwar nur in dem Umfang, den der User vorher freigegeben hat. Bei uns beschränkt sich das auf die Email und den Vor- und Nachnamen des Users, damit wir die Registrierung vereinfachen können und den User schneller und komfortabler einloggen können.
 
 ## Frontend
 ### Repository
