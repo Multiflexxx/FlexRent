@@ -27,4 +27,7 @@
 - [Anna-Lena Richert](https://github.com/aalenaa)
 
 ## Useful Links:
-[NativeScript Docs](https://docs.nativescript.org/angular/start/quick-setup)
+[FlexRent](https://flexrent.multiflexxx.de/)
+[Flutter](https://flutter.dev/)
+[Dart](https://dart.dev/)
+[NestJS](https://nestjs.com/)
