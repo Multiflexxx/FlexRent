@@ -27,7 +27,7 @@
 - [Anna-Lena Richert](https://github.com/aalenaa)
 
 ## Useful Links:
-[FlexRent](https://flexrent.multiflexxx.de/)
-[Flutter](https://flutter.dev/)
-[Dart](https://dart.dev/)
-[NestJS](https://nestjs.com/)
+- [FlexRent](https://flexrent.multiflexxx.de/)
+- [Flutter](https://flutter.dev/)
+- [Dart](https://dart.dev/)
+- [NestJS](https://nestjs.com/)
