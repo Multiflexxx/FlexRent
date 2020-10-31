@@ -50,6 +50,8 @@ In Flexrent wird die Kamera als Vorteil einer Mobilenanwendung verwendet, um QR 
 
 ### Flutter 
 
+Flutter ist ein Framework, mit welchem schnell Apps sowohl für Android als auch für iOS erstellt werden können. Flutter wurde von Google entwickelt und basiert auf Googles hauseigener Programmiersprache Dart. Dart ist ähnlich zu Java aber auch zu Javascript, was die Lernkurve für uns stark reduzierte und uns somit eine schnellere Entwicklung bescherte.Flutter ist sehr einfach zu installieren und einzubinden, da Android Studio/IntelliJ sowie Visual Studio Code bereits sehr gute Plugins dafür bestzen. Außerdem ist Flutter besonders auf Apps ausgelegt, da bereits Material und Cupertino Designs eingebunden sind. Weitere Informationen können auf der offiziellen Website von [Flutter](https://flutter.dev/) oder [Dart](https://dart.dev/) gefunden werden.
+
 ### NestJs
 NestJS ist ein auf Node.js basierendes Framework, dass Javascript und Typescript unterstützt. NestJS nutzt HTTP Server Frameworks wie Express um möglichst robust zu funktionieren. Wir haben uns für NestJS entschieden, da wir die Unterstützung von Objektorientierung und Typsicherheit bevorzugen und der Typescriptsupport von NestJS sehr gut ist. Zusätzlich ist vorallem der Modulare Aufbau von NestJs gut, um ein separation of concerns zu erhalten.
 Weitere Informationen finden sich auch der [Webseite von NestJs](https://docs.nestjs.com/).
