@@ -3,7 +3,8 @@
 <p align="center">
   <img alt="Flexrent Logo" width="30%" height="auto" src="https://raw.githubusercontent.com/Multiflexxx/FlexRent/master/Logo/PNG/HighResolution/Logo_purple_no_background.png"><br><br>
   <img src="https://badgen.net/github/tag/Multiflexxx/client-flex-rent/?color=purple">
-  <img src="https://badgen.net/github/release/Multiflexxx/client-flex-rent/?color=pink"><br>
+  <img src="https://badgen.net/github/release/Multiflexxx/client-flex-rent/?color=pink">
+  <img alt="uptime" src="https://badgen.net/uptime-robot/day/m786242203-1d182d7e978c6d1848dd508a"><br>
   <a href="https://flexrent.multiflexxx.de/BuildApp/Releases/flexrent.apk"><img alt="Lade die App herunter" src="https://badgen.net/badge/Download/Lade_die_App_herunter/?color=blue"></a>
 </p>
 
@@ -30,6 +31,7 @@
 7) [Ausblick für die Zukunft](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#die-zukunft-von-flexrent)
 8) [Marketing](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#marketing)
 9) [Rechtliches](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#rechtliche-grundlagen)
+10) [Functional Requirements]()
 
 
 ## Idee:
@@ -152,3 +154,6 @@ Anschließend wird die App unter einem Link bereitgestellt bzw. die API mit den 
 -  Häufig wird der Leihvertrag auch als Gebrauchsüberlassung bezeichnet.
 - Es liegt ein Mietvertrag vor, da es eine entgeltliche Verleihung eines Gegenstandes/ Sache ist. -> Mietgebühr
 - Als allgemeine zivilrechtliche Rechtsgrundlage dient für Dienstleistungen der Dienstvertrag, bei dem nach § 611 BGB der Dienstverpflichtete gegen Vergütung Dienste jeder Art für den Dienstberechtigten erbringen soll. Es handelt sich um einen individualrechtlichen Austauschvertrag        zwi-schen Auftraggeber und Auftragnehmer über die unabhängige oder abhängige Leis-tung eines Dienstes gegen ein Entgelt. Bei allen Dienstleistungen sind die Dienstleis-tungspflicht und die Vergütungspflicht vertragliche Hauptpflichten. Die Dienstleistung ist vom Dienstverpflichteten im Zweifel persönlich zu erbringen (§ 613 BGB). Diese persönliche Abhängigkeit trifft jedoch nicht auf gattungsmäßig umschriebene Tätigkei-ten im Rahmen freier Dienstnehmer zu.
+
+## Functional Requirements
+Unsere Functional Requirements sind [hier](https://github.com/Multiflexxx/FlexRent/blob/master/Functional%20Requirements.md) zu finden.
