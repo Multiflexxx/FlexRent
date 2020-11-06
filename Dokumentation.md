@@ -68,16 +68,16 @@ Weitere Informationen finden sich auf der [Webseite der MariaDB Foundation](http
 
 ### Docker
 Die Containervirtualisierungssoftware Docker hilft uns dabei mehrere Prozesse isoliert voneinander auf einem Server laufen zu lassen.
-So nutzen wir verschiedene Container um unsere API bereitzustellen, neue App Versionen zu kompilieren und den Datenbankserver bereitzustellen.
+So nutzen wir verschiedene Container, um unsere API bereitzustellen, neue App Versionen zu kompilieren und den Datenbankserver bereitzustellen.
 Weiter Informationen zu Docker finden sich auf der [Webseite von Docker](https://www.docker.com/).
 
 ### Google Geocoding API
-Die Geocoding API gibt Konvertiert gegebene Daten wie Straße, Hausnummer, Postleitzahl und Stadt in geographische Koordinaten.
-Diese Koordinaten können dann verwendet werden, um zum Beispiel die Distanz zwischen zwei Punkten auf der Welt zu bererechnen.
+Die Geocoding API konvertiert gegebene Daten wie Straße, Hausnummer, Postleitzahl und Stadt in geografische Koordinaten.
+Diese Koordinaten können dann verwendet werden, um zum Beispiel die Distanz zwischen zwei Punkten auf der Welt zu berechnen.
 Weitere Informationen finden sich auf der [Webseite von Google](https://developers.google.com/maps/documentation/geocoding/overview).
 
 ### OAuth2
-Ein User oder Resource Owner kann mit Hilfe des OAuth2 Protokolls einer Anwendung (Client) den Zugriff auf seine Daten erlauben, die von einem anderen Dienst (Resource Server) bereitgestellt werden, ohne geheime Details seiner Zugangsberechtigung dem Client preiszugeben. Beispielsweise kann ein User einem Dritten (in diesem Fall unserer App) erlauben, auf seine/ihre Daten auf Facebook, Google & co. zuzugreifen. Das erfolgt durch manuelle Bestätigung des Users bei der Registrierung (Sign up with Google/Apple/Facebook). Nach erfolgter Bestätigung erhalten wir einen Token, den wir benutzen können, um bei den APIs von Google/Apple/Facebook Informationen über den User aufzurufen, und zwar nur in dem Umfang, den der User vorher freigegeben hat. Bei uns beschränkt sich das auf die Email und den Vor- und Nachnamen des Users, damit wir die Registrierung vereinfachen können und den User schneller und komfortabler einloggen können.
+Ein User oder Resource Owner kann mit Hilfe des OAuth2 Protokolls einer Anwendung (Client) den Zugriff auf seine Daten erlauben, die von einem anderen Dienst (Resource Server) bereitgestellt werden, ohne geheime Details seiner Zugangsberechtigung dem Client preiszugeben. Beispielsweise kann ein User einem Dritten (in diesem Fall unserer App) erlauben, auf seine/ihre Daten auf Facebook, Google & Co. zuzugreifen. Das erfolgt durch manuelle Bestätigung des Users bei der Registrierung (Sign up with Google/Apple/Facebook). Nach erfolgter Bestätigung erhalten wir einen Token, den wir benutzen können, um bei den APIs von Google/Apple/Facebook Informationen über den User aufzurufen, und zwar nur in dem Umfang, den der User vorher freigegeben hat. Bei uns beschränkt sich das auf die Email und den Vor- und Nachnamen des Users, damit wir die Registrierung vereinfachen können und den User schneller und komfortabler einloggen können.
 
 ## Frontend
 ### Repository
@@ -103,27 +103,27 @@ Ein User oder Resource Owner kann mit Hilfe des OAuth2 Protokolls einer Anwendun
 Der Backendcode gliedert sich in einzelne Module, die jeweils einen Controller, einen Service und verschiedene Models beinhalten.
 Das Backend teilt sich dabei in die Überkategorien `User` und `Offer`.
 Das Usermodul kümmert sich um alle Anfragen, die etwas mit Benutzern zu tun haben. Hier können Nutzer erstellt, geupdated, verifiziert und gelöscht werden.
-Das Offermodul kümmertsich darum, dass Nutzer Angebote einstellen, ändern, suchen, löschen und buchen können. Zusätzlich kümmert es sich um den kompletten Verleihprozess.
-Das Offermodul greift zur verifizierung der Benutzer auf das Usermodul zu. So kann duplicated code vermieden werden und ein separation of concerns erreicht werden.
+Das Offermodul kümmert sich darum, dass Nutzer Angebote einstellen, ändern, suchen, löschen und buchen können. Zusätzlich kümmert es sich um den kompletten Verleihprozess.
+Das Offermodul greift zur Verifizierung der Benutzer auf das Usermodul zu. So kann duplicated code vermieden werden und ein separation of concerns erreicht werden.
 Beide Module besitzen gemeinsam verwendete Hilfsfunktionen, die die Kommunikation mit der Datenbank und das Schreiben und Lesen von Dateien von Festplattendaten ermöglichen. Die Hilfsfunktionen sind dabei statisch.
-Statt Objekten werden Interfaces zum Internen Datenaustausch verwendet, dadurch wird vermieden, dass Objekte bei jeder Benutzung neu instanziiert werden müssen.
+Statt Objekten werden Interfaces zum internen Datenaustausch verwendet, dadurch wird vermieden, dass Objekte bei jeder Benutzung neu instanziiert werden müssen.
 Asynchrone Aufrufe werden mit dem Promise-Konzept gehandlet, da dies eine bessere Lesbarkeit bietet als Callbackfunctions.
 
 Eine Besonderheit ist die Handhabung der Lokationen der Angebote:
-Um zu gewährleisten, dass Nutzer nur Angebote in ihrer Nähe finden sind die Angebote mit der Postleitzahl des Verleihers verknüpft.
-Da es schwierig ist jedes Mal alle Distanzen zum Mieter neu zu berechnen haben wir uns dazu entschieden die Distanz von jeder Stadt zu jeder anderen Stadt vorher zu berechnen und in einer Tabelle abzuspeichern. Mit unseren ~13.000 Postleitzahlen erhalten wir daher eine Tabelle mit Distanzen mit ~169.000.000 Einträgen.
+Um zu gewährleisten, dass Nutzer nur Angebote in ihrer Nähe finden, sind die Angebote mit der Postleitzahl des Verleihers verknüpft.
+Da es schwierig ist jedes Mal alle Distanzen zum Mieter neu zu berechnen, haben wir uns dazu entschieden, die Distanz von jeder Stadt zu jeder anderen Stadt vorher zu berechnen und in einer Tabelle abzuspeichern. Mit unseren ~13.000 Postleitzahlen erhalten wir daher eine Tabelle mit Distanzen mit ~169.000.000 Einträgen.
 Die Suche durch diese Tabelle ist jedoch deutlich schneller (ein paar Millisekunden) als die Neuberechnung bei jeder Suche.
-Um die Geokoordinaten der einzelnen Städte zu erhalten wurde die Google Maps Geocoding API verwendet. Zu jeder Postleitzahl aus unserer Tabelle (die eigentlich zur Verifikation der Nutzereingaben dient) haben wir die Latitude und die Longitude mit der Google API gesucht.
+Um die Geokoordinaten der einzelnen Städte zu erhalten, wurde die Google Maps Geocoding API verwendet. Zu jeder Postleitzahl aus unserer Tabelle (die eigentlich zur Verifikation der Nutzereingaben dient) haben wir die Latitude und die Longitude mit der Google API gesucht.
 
 ### Die API
-Für die verbindung zum Frontend haben wir uns für einen REST-API entschieden.
-Die HTTP-Methoden lassen sich optimal auf die CRUD-Methoden für relationale Datenbanken Mappen, was ein einfacheres Verständis der Vorgänge ermöglicht.
+Für die Verbindung zum Frontend haben wir uns für einen REST-API entschieden.
+Die HTTP-Methoden lassen sich optimal auf die CRUD-Methoden für relationale Datenbanken mappen, was ein einfacheres Verständnis der Vorgänge ermöglicht.
 NestJs bietet zusätzlich für die Entwicklung von REST-APIs viele nützliche Features wie z.B. die Dekoratoren in den Controllern.
 Das Error-Handling von NestJS ermöglicht es zudem leicht HTTP-Fehlercodes auszugeben. Eine ausführlichere Dokumentation der API kann in der [API Dokumentation](https://github.com/Multiflexxx/FlexRent/blob/master/API-Documentation.md) gefunden werden.
 Wir haben uns gegen die Verwendung von Swagger in Verwendung mit NestJS entschieden, da bereits ein erster Versuch in Nutzung der Dokumentationsfunktion keine brauchbaren Ergebnisse lieferte.
 
 ## CI/CD
-Sowohl das Frontend als auch das Backend verwenden verwenden GithubActions für einen automatisierten Deploymentprozess.
+Sowohl das Frontend als auch das Backend verwenden GithubActions für einen automatisierten Deploymentprozess.
 Bei einem Push auf unsere `releases`-Branches, wird jeweils eine GithubAction getriggert, die einen Endpoint auf unserem Server aufruft.
 Der Server zieht dann einen pull von Github und kompiliert die App mit Flutter, bzw. die API mit NestJS.
 Anschließend wird die App unter einem Link bereitgestellt bzw. die API mit den neuen Features bereitgestellt.
@@ -151,9 +151,9 @@ Anschließend wird die App unter einem Link bereitgestellt bzw. die API mit den 
 
 ## Rechtliche Grundlagen:
 - Mit einem Leihvertrag wird eine Sache (kein Recht) gemäß §§ 598 bis 606 BGB unentgeltlich zum Gebrauch überlassen. Beim Ausleihen einer Sache geht der Verleiher im Alltag davon aus, dass die Sache auch zurückgegeben wird, zu Recht: Nach Ablauf der Leihzeit oder durch vorzeitige Vertragskündigung durch eine der Parteien muss der Entleiher dem Verleiher die entliehene Sache zurückgeben. Während der Leihzeit ist die entliehene Sache vom Entleiher ausschließlich vertragsgemäß zu gebrauchen; eine Weitergabe an Dritte ist nach § 603 BGB untersagt. Der Entleiher haftet nicht für Abnutzungen und Verschlechterungen an der Sache, die durch einen ordnungs- und vertragsgemäßen Gebrauch auftreten; bei einem nicht vertragsgemäßen Gebrauch richtet sich die Haftung jedoch nach dem allgemeinen Schadensersatzrecht. Bei einer Leihe handelt es sich rechtlich um einen unvollkommen zweiseitigen Vertrag; der Verleiher ist zur entgeltfreien Leihgabe über den vereinbarten Zeitraum verpflichtet, der Entleiher zum sachgemäßen Umgang mit der Sache und die fristgemäße Rückgabe derer verpflichtet.
--  Häufig wird der Leihvertrag auch als Gebrauchsüberlassung bezeichnet.
+- Häufig wird der Leihvertrag auch als Gebrauchsüberlassung bezeichnet.
 - Es liegt ein Mietvertrag vor, da es eine entgeltliche Verleihung eines Gegenstandes/ Sache ist. -> Mietgebühr
-- Als allgemeine zivilrechtliche Rechtsgrundlage dient für Dienstleistungen der Dienstvertrag, bei dem nach § 611 BGB der Dienstverpflichtete gegen Vergütung Dienste jeder Art für den Dienstberechtigten erbringen soll. Es handelt sich um einen individualrechtlichen Austauschvertrag        zwi-schen Auftraggeber und Auftragnehmer über die unabhängige oder abhängige Leis-tung eines Dienstes gegen ein Entgelt. Bei allen Dienstleistungen sind die Dienstleis-tungspflicht und die Vergütungspflicht vertragliche Hauptpflichten. Die Dienstleistung ist vom Dienstverpflichteten im Zweifel persönlich zu erbringen (§ 613 BGB). Diese persönliche Abhängigkeit trifft jedoch nicht auf gattungsmäßig umschriebene Tätigkei-ten im Rahmen freier Dienstnehmer zu.
+- Als allgemeine zivilrechtliche Rechtsgrundlage dient für Dienstleistungen der Dienstvertrag, bei dem nach § 611 BGB der Dienstverpflichtete gegen Vergütung Dienste jeder Art für den Dienstberechtigten erbringen soll. Es handelt sich um einen individualrechtlichen Austauschvertrag zwischen Auftraggeber und Auftragnehmer über die unabhängige oder abhängige Leistung eines Dienstes gegen ein Entgelt. Bei allen Dienstleistungen sind die Dienstleistungspflicht und die Vergütungspflicht vertragliche Hauptpflichten. Die Dienstleistung ist vom Dienstverpflichteten im Zweifel persönlich zu erbringen (§ 613 BGB). Diese persönliche Abhängigkeit trifft jedoch nicht auf gattungsmäßig umschriebene Tätigkeiten im Rahmen freier Dienstnehmer zu.
 
 ## Functional Requirements
 Unsere Functional Requirements sind [hier](https://github.com/Multiflexxx/FlexRent/blob/master/Functional%20Requirements.md) zu finden.
