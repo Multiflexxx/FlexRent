@@ -35,31 +35,31 @@
 
 
 ## Idee:
-Du brauchst eine Bohrmaschine oder eine Musikbox aber nur für eine kurze Zeit brauchst sie nur dafür dann bist du auf Flexrent genau richtig. Wir wollen eine Plattform bieten auf der Gegenstände von Privatperson zu Privatperson zu vermietet werden können. Die Mobile App ermöglicht es den Nutzern Gegenstände zu vermieten und Gegenstände zu mieten. Dafür genügt die Erstellung eines Profils. 
+Du brauchst eine Bohrmaschine oder eine Musikbox aber nur für eine kurze Zeit, dann bist du auf FlexRent genau richtig. Wir wollen eine Plattform bieten, auf der Gegenstände von Privatperson zu Privatperson zu vermietet werden können. Die Mobile App ermöglicht es den Nutzern Gegenstände zu vermieten und Gegenstände zu mieten. Dafür genügt die Erstellung eines Profils. 
 
-FlexRent bietet einen Marktplatz für Privatpersonen, die selten genutzte Gegenstände leihen oder verleihen möchten. Durch FlexRent besteht die Möglichkeit Gegestände, die ansonsten verstauben, zu Geld zu machen. Eine teuere Heckenschere, die nur einmal im Jahr benötigt wird kann hier für andere Menschen angeboten werden. Andererseits können Nutzer Gegenstände die sie für einen bestimmten Zeitpunkt benötigen mieten und sparen sich das Geld für eine Neuanschaffung. 
+FlexRent bietet einen Marktplatz für Privatpersonen, die selten genutzte Gegenstände leihen oder verleihen möchten. Durch FlexRent besteht die Möglichkeit Gegestände, die ansonsten verstauben, zu Geld zu machen. Eine teuere Heckenschere, die nur einmal im Jahr benötigt wird, kann hier für andere Menschen angeboten werden. Andererseits können Nutzer Gegenstände, die sie für einen bestimmten Zeitpunkt benötigen, mieten und sparen sich das Geld für eine Neuanschaffung. 
 
-Die App bietet das eanbieten und das leichte finden von Gegenständen in der Nähe. Die Vermieter können selbst Zeiträume bestimmen, an denen er den Gegenstand nicht benötigt. Zudem hat er die Möglichkeit den Preis, Bilder und eine Beschreibung des Gegenstandes anzufertigen. 
+Die App bietet das Anbieten und das leichte Finden von Gegenständen in der Nähe. Die Vermieter können selbst Zeiträume bestimmen, an denen er den Gegenstand nicht benötigt. Zudem hat er die Möglichkeit, den Preis, Bilder und eine Beschreibung des Gegenstandes anzufertigen. 
 
-Diese Gegensände können von den Mietern gefunden werden. Vermieter erhalten Bewertungen von den Mietern. So haben Mieter die Möglichkeit zuverlässige Vermieter zu finden. 
+Diese Gegenstände können von den Mietern gefunden werden. Vermieter erhalten Bewertungen von den Mietern. So haben Mieter die Möglichkeit zuverlässige Vermieter zu finden. 
 
-Der Mietprozess wird durch die App vereinfacht gestaltet. Der Mieter sucht sich den passenden Gegenstand und startet eine Mietanfrage. Wenn der Vermieter diese Anfrage annimmt kann der Mieter den Gegenstand bei dem Vermieter abholen.  
+Der Mietprozess wird durch die App vereinfacht gestaltet. Der Mieter sucht sich den passenden Gegenstand und startet eine Mietanfrage. Wenn der Vermieter diese Anfrage annimmt, kann der Mieter den Gegenstand bei dem Vermieter abholen.  
 
-In Flexrent wird die Kamera als Vorteil einer Mobilenanwendung verwendet, um QR Codes beim Abholen und Zurückbringen des Gegenstandes zu scannen. Damit stellen wir sicher, welche Person im Besitz des Gegenstandes ist, da beide Nutzer mit dem QR Code interagieren müssen. Beim Verleihen wird der QR Code auf der Seite des Mieters erzeugt. Der Vermieter Scannt diesen. Bei der Rückgabe ist es umgekehrt.  
+In FlexRent wird die Kamera als Vorteil einer mobilen Anwendung verwendet, um QR Codes beim Abholen und Zurückbringen des Gegenstandes zu scannen. Damit stellen wir sicher, welche Person im Besitz des Gegenstandes ist, da beide Nutzer mit dem QR Code interagieren müssen. Beim Verleihen wird der QR Code auf der Seite des Mieters erzeugt. Der Vermieter scannt diesen. Bei der Rückgabe ist es umgekehrt.  
 
 
 ## Technologien
 
 ### Flutter 
 
-Flutter ist ein Framework, mit welchem schnell Apps sowohl für Android als auch für iOS erstellt werden können. Flutter wurde von Google entwickelt und basiert auf Googles hauseigener Programmiersprache Dart. Dart ist ähnlich zu Java aber auch zu Javascript, was die Lernkurve für uns stark reduzierte und uns somit eine schnellere Entwicklung bescherte.Flutter ist sehr einfach zu installieren und einzubinden, da Android Studio/IntelliJ sowie Visual Studio Code bereits sehr gute Plugins dafür bestzen. Außerdem ist Flutter besonders auf Apps ausgelegt, da bereits Material und Cupertino Designs eingebunden sind. Weitere Informationen können auf der offiziellen Website von [Flutter](https://flutter.dev/) oder [Dart](https://dart.dev/) gefunden werden.
+Flutter ist ein Framework, mit welchem schnell Apps sowohl für Android als auch für iOS erstellt werden können. Flutter wurde von Google entwickelt und basiert auf Googles hauseigener Programmiersprache Dart. Dart ist ähnlich zu Java aber auch zu Javascript, was die Lernkurve für uns stark reduzierte und uns somit eine schnellere Entwicklung bescherte. Flutter ist sehr einfach zu installieren und einzubinden, da Android Studio/IntelliJ sowie Visual Studio Code bereits sehr gute Plugins dafür besetzen. Außerdem ist Flutter besonders auf Apps ausgelegt, da bereits Material und Cupertino Designs eingebunden sind. Weitere Informationen können auf der offiziellen Website von [Flutter](https://flutter.dev/) oder [Dart](https://dart.dev/) gefunden werden.
 
 ### NestJs
-NestJS ist ein auf Node.js basierendes Framework, dass Javascript und Typescript unterstützt. NestJS nutzt HTTP Server Frameworks wie Express um möglichst robust zu funktionieren. Wir haben uns für NestJS entschieden, da wir die Unterstützung von Objektorientierung und Typsicherheit bevorzugen und der Typescriptsupport von NestJS sehr gut ist. Zusätzlich ist vorallem der Modulare Aufbau von NestJs gut, um ein separation of concerns zu erhalten.
-Weitere Informationen finden sich auch der [Webseite von NestJs](https://docs.nestjs.com/).
+NestJS ist ein auf Node.js basierendes Framework, dass Javascript und Typescript unterstützt. NestJS nutzt HTTP Server Frameworks wie Express, um möglichst robust zu funktionieren. Wir haben uns für NestJS entschieden, da wir die Unterstützung von Objektorientierung und Typsicherheit bevorzugen und der Typescriptsupport von NestJS sehr gut ist. Zusätzlich ist vor allem der Modulare Aufbau von NestJs gut, um ein separation of concerns zu erhalten.
+Weitere Informationen finden sich auch der [Webseite von NestJS](https://docs.nestjs.com/).
 
 ### TypeScript
-Da wir mit der Festlegung auf NestJS bereits die Auswahl der möglichen Programmiersprachen auf Javascript und Typescribt eingrenzten, viel und die finale Festlegung auf Typescript recht leicht. Typescript ist eine auf Javascript basierende Programmiersprache, die im Gegesatz zu Javascript Typsicherheit erlaubt. Das macht es nicht nur einfacher mit der Programmiersprache zu arbeiten (siehe ausgefeilte Vorschläge mit z.B. IntelliSens von VS Code), sondern schützt auch uns Entwickler vor unseren eigenen Fehlern, die bei Javascript gerne mal so lange unter dem Radar fliegen, bis der node Server nur noch 500er Fehler wirft. Typescript schafft es dabei so nah an Javascript zu bleiben, dass die Lernkurve bei einem gewissen Grundlagenwissen in Javascript nach ein paar Minuten bereits erklommen sein kann.
+Da wir mit der Festlegung auf NestJS bereits die Auswahl der möglichen Programmiersprachen auf Javascript und Typescript eingrenzten, viel und die finale Festlegung auf Typescript recht leicht. Typescript ist eine auf Javascript basierende Programmiersprache, die im Gegesatz zu Javascript Typsicherheit erlaubt. Das macht es nicht nur einfacher mit der Programmiersprache zu arbeiten (siehe ausgefeilte Vorschläge mit z.B. IntelliSens von VS Code), sondern schützt auch uns Entwickler vor unseren eigenen Fehlern, die bei Javascript gerne mal so lange unter dem Radar fliegen, bis der node Server nur noch 500er Fehler wirft. Typescript schafft es dabei so nah an Javascript zu bleiben, dass die Lernkurve bei einem gewissen Grundlagenwissen in Javascript nach ein paar Minuten bereits erklommen sein kann.
 
 ### MariaDB
 MariaDB ist ein Open-Source Datenbankmanagementsystem für relationale Datenbanken, welches als Fork aus MySQL entstand.
