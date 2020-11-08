@@ -136,8 +136,6 @@ Bei einem Push auf unsere `releases`-Branches, wird jeweils eine GithubAction ge
 Der Server zieht dann einen pull von Github und kompiliert die App mit Flutter, bzw. die API mit NestJS.
 Anschließend wird die App unter einem Link bereitgestellt bzw. die API mit den neuen Features bereitgestellt.
 
-## Lizenz
-
 ## Die Zukunft von Flexrent
 - Chat 
 - Lightmode
