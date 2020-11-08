@@ -71,10 +71,15 @@ Die Containervirtualisierungssoftware Docker hilft uns dabei mehrere Prozesse is
 So nutzen wir verschiedene Container, um unsere API bereitzustellen, neue App Versionen zu kompilieren und den Datenbankserver bereitzustellen.
 Weiter Informationen zu Docker finden sich auf der [Webseite von Docker](https://www.docker.com/).
 
-### Google Geocoding API
+### Verwendete APIs
+
+#### Google Geocoding API
 Die Geocoding API konvertiert gegebene Daten wie Straße, Hausnummer, Postleitzahl und Stadt in geografische Koordinaten.
 Diese Koordinaten können dann verwendet werden, um zum Beispiel die Distanz zwischen zwei Punkten auf der Welt zu berechnen.
 Weitere Informationen finden sich auf der [Webseite von Google](https://developers.google.com/maps/documentation/geocoding/overview).
+
+#### openGTIN API
+Mit der [openGTIN Datenbank](https://opengtindb.org/index.php) (Ehemals openEAN Datenbank) kann anhand einer [GTIN](https://www.gs1-germany.de/gs1-standards/identifikation/artikel-gtin-sgtin/) ein Produkt Identifiziert werden. Die API dieser Datenbank wird beim hinzufügen eines Produkts über den QR Code benutzt, um automatische Informationen zu erlangen. Momentan wird nur der kostenlose Testzugriff genutzt. Im weiteren Entwicklungsverlauf der App sollte jedoch eine Lizenz erworben werden.
 
 ### OAuth2
 Ein User oder Resource Owner kann mit Hilfe des OAuth2 Protokolls einer Anwendung (Client) den Zugriff auf seine Daten erlauben, die von einem anderen Dienst (Resource Server) bereitgestellt werden, ohne geheime Details seiner Zugangsberechtigung dem Client preiszugeben. Beispielsweise kann ein User einem Dritten (in diesem Fall unserer App) erlauben, auf seine/ihre Daten auf Facebook, Google & Co. zuzugreifen. Das erfolgt durch manuelle Bestätigung des Users bei der Registrierung (Sign up with Google/Apple/Facebook). Nach erfolgter Bestätigung erhalten wir einen Token, den wir benutzen können, um bei den APIs von Google/Apple/Facebook Informationen über den User aufzurufen, und zwar nur in dem Umfang, den der User vorher freigegeben hat. Bei uns beschränkt sich das auf die Email und den Vor- und Nachnamen des Users, damit wir die Registrierung vereinfachen können und den User schneller und komfortabler einloggen können.
