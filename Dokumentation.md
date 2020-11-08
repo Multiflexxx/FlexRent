@@ -39,7 +39,7 @@ Du brauchst eine Bohrmaschine oder eine Musikbox aber nur für eine kurze Zeit? 
 
 FlexRent bietet einen Marktplatz für Privatpersonen, die selten genutzte Gegenstände leihen oder verleihen möchten. Durch FlexRent besteht die Möglichkeit Gegestände, die ansonsten verstauben, zu Geld zu machen. Eine teuere Heckenschere, die nur einmal im Jahr benötigt wird, kann hier für andere Menschen angeboten werden. Andererseits können Nutzer Gegenstände, die sie für einen bestimmten Zeitpunkt benötigen, mieten und sparen sich das Geld für eine Neuanschaffung. 
 
-Die App bietet das Anbieten und das leichte Finden von Gegenständen in der Nähe. Die Vermieter können selbst Zeiträume bestimmen, an denen er den Gegenstand nicht benötigt. Zudem hat er die Möglichkeit, den Preis, Bilder und eine Beschreibung des Gegenstandes anzufertigen. 
+Die App bietet das Anbieten und das leichte Finden von Gegenständen in der Nähe. Der Vermieter kann selbst Zeiträume bestimmen, an denen er den Gegenstand nicht benötigt. Zudem hat er die Möglichkeit, den Preis, Bilder und eine Beschreibung des Gegenstandes anzufertigen. 
 
 Diese Gegenstände können von den Mietern gefunden werden. Vermieter erhalten Bewertungen von den Mietern. So haben Mieter die Möglichkeit zuverlässige Vermieter zu finden. 
 
