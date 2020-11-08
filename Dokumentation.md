@@ -35,7 +35,7 @@
 
 
 ## Idee:
-Du brauchst eine Bohrmaschine oder eine Musikbox aber nur für eine kurze Zeit, dann bist du auf FlexRent genau richtig. Wir wollen eine Plattform bieten, auf der Gegenstände von Privatperson zu Privatperson zu vermietet werden können. Die Mobile App ermöglicht es den Nutzern Gegenstände zu vermieten und Gegenstände zu mieten. Dafür genügt die Erstellung eines Profils. 
+Du brauchst eine Bohrmaschine oder eine Musikbox aber nur für eine kurze Zeit? Dann bist du auf FlexRent genau richtig. Wir wollen eine Plattform bieten, auf der Gegenstände von Privatperson zu Privatperson zu vermietet werden können. Die Mobile App ermöglicht es den Nutzern Gegenstände zu vermieten und Gegenstände zu mieten. Dafür genügt die Erstellung eines Profils. 
 
 FlexRent bietet einen Marktplatz für Privatpersonen, die selten genutzte Gegenstände leihen oder verleihen möchten. Durch FlexRent besteht die Möglichkeit Gegestände, die ansonsten verstauben, zu Geld zu machen. Eine teuere Heckenschere, die nur einmal im Jahr benötigt wird, kann hier für andere Menschen angeboten werden. Andererseits können Nutzer Gegenstände, die sie für einen bestimmten Zeitpunkt benötigen, mieten und sparen sich das Geld für eine Neuanschaffung. 
 
