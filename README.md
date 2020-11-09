@@ -17,6 +17,13 @@
   <img width="33%" src="https://github.com/Multiflexxx/FlexRent/blob/master/Screenshots/login_dark.png">
   <img width="33%" src="https://github.com/Multiflexxx/FlexRent/blob/master/Screenshots/register_dark.png">
   <img width="33%" src="https://github.com/Multiflexxx/FlexRent/blob/master/Screenshots/settings_dark.png">
+  
+  <img width="33%" src="https://github.com/Multiflexxx/FlexRent/blob/master/Screenshots/start_dark.png">
+  <img width="33%" src="https://github.com/Multiflexxx/FlexRent/blob/master/Screenshots/category_dark.png">
+  <img width="33%" src="https://github.com/Multiflexxx/FlexRent/blob/master/Screenshots/category_list_dark.png">
+  <img width="33%" src="https://github.com/Multiflexxx/FlexRent/blob/master/Screenshots/detail_offer_dark.png">
+  <img width="33%" src="https://github.com/Multiflexxx/FlexRent/blob/master/Screenshots/calendar_dark.png">
+  <img width="33%" src="https://github.com/Multiflexxx/FlexRent/blob/master/Screenshots/lessor_items_dark.png">
 </p>
 
 ### Light Mode
