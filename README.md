@@ -18,6 +18,7 @@
   <img width="33%" src="https://github.com/Multiflexxx/FlexRent/blob/master/Screenshots/register_dark.png">
   <img width="33%" src="https://github.com/Multiflexxx/FlexRent/blob/master/Screenshots/settings_dark.png">
 </p>
+
 ### Light Mode
 <p float="left">  
   <img width="33%" src="https://github.com/Multiflexxx/FlexRent/blob/master/Screenshots/login_light.png">
