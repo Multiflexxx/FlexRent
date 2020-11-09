@@ -11,6 +11,19 @@
   <a href="https://flexrent.multiflexxx.de/Releases/flexrent.apk"><img alt="Lade die App herunter" src="https://badgen.net/badge/Download/Lade_die_App_herunter/?color=blue"></a>
 </p>
 
+## Screenshots
+### Dark Mode
+<p float="left">
+  <img width="33%" src="https://github.com/Multiflexxx/FlexRent/blob/master/Screenshots/login_dark.png">
+  <img width="33%" src="https://github.com/Multiflexxx/FlexRent/blob/master/Screenshots/register_dark.png">
+  <img width="33%" src="https://github.com/Multiflexxx/FlexRent/blob/master/Screenshots/settings_dark.png">
+</p>
+### Light Mode
+<p float="left">  
+  <img width="33%" src="https://github.com/Multiflexxx/FlexRent/blob/master/Screenshots/login_light.png">
+  <img width="33%" src="https://github.com/Multiflexxx/FlexRent/blob/master/Screenshots/register_light.png">
+  <img width="33%" src="https://github.com/Multiflexxx/FlexRent/blob/master/Screenshots/settings_light.png">
+</p>
 
 ## Dokumentation
 [Zur Dokumentation](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md)
