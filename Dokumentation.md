@@ -94,6 +94,7 @@ Ein User oder Resource Owner kann mit Hilfe des OAuth2 Protokolls einer Anwendun
 ### Verwendete Technologien
 - Flutter für die Appentwicklung
 - CI/CD mit GithubActions
+- BLoC Pattern für Separations of Concern
 
 ## Backend
 ### Repository
