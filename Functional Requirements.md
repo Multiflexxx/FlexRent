@@ -31,7 +31,7 @@ In der Übersicht/ in der Liste der Produkte sollte dabei jedoch nur diese Infor
 Hauptfuntkionalität: Suchen nach einem Produkt/ einer Kategorie
 Beschreibung: Auf der Hauptseite und der Kategorieseite sollte eine Suchleiste sein, mit der gesucht werden kann. Bei Eingabe eines Suchbegriffes sollen relevante Artikel angezeigt werden. Die Suche sollte dabei auf einen Suchradius begrenzt sein, der oben unter der Suchleiste eingestellt werden kann. Wird ein passender Artikel nicht gefunden, so soll nach ähnlichen Produkten gesucht werden oder eine Kategorie vorgeschlagen werden. Bereits gesuchte Begriffe sollen gespeichert und bei erneuter Eingabe vorgeschlagen werden. Auch sollen Vorschläge für noch nicht beendete Suchbegriffe angezeigt werden. Außerdem soll es eine Kategorieseite geben, auf welcher verschiedene Kategorien angezeigt werden. Wenn auf eine Kategorie geklickt wird, sollen nur Produkte dieser Kategorie angezeigt werden in einem Festgelegten umkreis, den der Benutzer oben festlegen kann.
 
-### Funtkion 3
+### Funktion 3
 Hautpfunktionalität: Vorschläge / Home Seite
 Beschreibung: Auf der Home/ Hauptseite der App sollen Vorschläge von Produkten zu finden sein. Dabei soll es mindestens 3 Kategorien geben. "Hot Right Now": Produkte aus Kategorien, in denen gerade viel gemietet wird. Diese Kategorie sollte nicht angezeigt werden, wenn nur wenig gemietet wird. "Featured": Hier werden Produkte angezeigt, dessen Anbieter eine besondere Markierung für ihr Produkt erworben haben. "Vorschläge": Hier sollen Produkte auf Kategorien vorgeschlagen werden, die auf Produkten basieren, die der Kunde bereits gemietet hat. Hat der Kunde noch nichts gemietet, so soll diese Kategorie nicht angezeigt werden. Es kann über weitere Kategorien nachgedacht werden, wie gesponserte Deals/ Rabatte/ Aktionen, oder eine Kategorie für neu hinzugefügte Produkte.
 
@@ -63,7 +63,7 @@ Beschreibung: Nachdem die Mietdauer abgeschlossen ist, soll der Mieter eine Push
 Hauptfunktionalität: Bewertungsfunktion
 Beschreibung: Nach einer Buchung kann der Mieter seine Erfahrungen zur Miete Bewerten. Einerseits wird diese Bewertung von Multiflexxx eingesehen anhand einiger platformspezifischer fragen, andererseits wird auch eine Bewertung für den Vermieter abgegeben. Diese summiert sich dann zu der gesamtbewertung. Auch der Vermieter kann dem Mieter eine Bewertung geben, was die durchschnittsbewertung/karma score des Mieters beeinflusst.
 
-### Funktion 10
+### Funktion 9
 Hauptfunktionalität: Einstellungen treffen
 Beschreibung: Der Benutzer soll einige Einstellungen treffen können. Diese Beinhalten:
 * Meine Informationen
@@ -79,7 +79,7 @@ Beschreibung: Der Benutzer soll einige Einstellungen treffen können. Diese Bein
     * Abmelden
     * Profil löschen
     
-### Funktion 11
+### Funktion 10
 Hauptfunktionalität: Registrierung
 Beschreibung: Ein Benutzer soll sich registrieren können. Dabei muss ein Benutzer seinen
 * Vornamen
@@ -96,11 +96,11 @@ Beschreibung: Ein Benutzer soll sich registrieren können. Dabei muss ein Benutz
 
 angeben. Anschließend kriegt er eine E-Mail, womit er seinen Account bestätigen kann. Um Buchen zu können, muss erst die Telefonnummer über SMS Bestätigt werden. Auch muss für eine Buchung ein Zahlungsmittel eingerichtet werden. Nach der Registrierung kann auch ein Profilbild hinzugefügt werden.
 
-### Funktion 12
+### Funktion 11
 Hauptfunktionalität: Login
 Beschreibung: Ein Benutzer soll sich einloggen können. Dabei muss er seine
 * E-Mail oder Telefonnummer
 * Passwort
 * (optional) Passwort speichern
 
-angegeben werden. Danach sollte der Nutzer eingeloggt bleiben.
+angegeben werden. Danach soll der Nutzer eingeloggt bleiben.
