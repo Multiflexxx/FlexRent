@@ -32,6 +32,7 @@
 8) [Marketing](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#marketing)
 9) [Rechtliches](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#rechtliche-grundlagen)
 10) [Functional Requirements](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#functional-requirements)
+11) [Das Logo](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#das-logo)
 
 
 ## Idee:
@@ -164,3 +165,8 @@ Anschließend wird die App unter einem Link bereitgestellt bzw. die API mit den 
 
 ## Functional Requirements
 Unsere Functional Requirements sind [hier](https://github.com/Multiflexxx/FlexRent/blob/master/Functional%20Requirements.md) zu finden.
+
+## Das Logo
+Unser Logo zeigt einen [Amethystglanzstar](https://de.wikipedia.org/wiki/Amethystglanzstar). Amethystglanzstare leben in Kolonien zusammen und sind gesellig.
+Das Zusammenleben in der Kolonie beschreibt gut unser Appmodell. Damit repräsentiert unser Logo perfekt eine Gemeinschaft.
+Zudem kann die Farbe Lila als Vereinigung der Gegensätze Blau und Rot verstanden werden ([Weitere Infos](https://alpina-farben.de/artikel/farbsymbolik-bedeutung-violett-lila/)). Unsere App bringt Mieter und Vermieter zusammen, welche sich auch gegensätzlich sind.
