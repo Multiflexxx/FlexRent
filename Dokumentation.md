@@ -108,7 +108,7 @@ Ein User oder Resource Owner kann mit Hilfe des OAuth2 Protokolls einer Anwendun
 - Google Geocoding API um die Geokoordinaten der Postleitzahlen zu erlangen
 - JSON zur Kommunikation mit der APP
 
-### Vorgehen und Erkärungen
+### Vorgehen und Erklärungen
 Der Backendcode gliedert sich in einzelne Module, die jeweils einen Controller, einen Service und verschiedene Models beinhalten.
 Das Backend teilt sich dabei in die Überkategorien `User` und `Offer`.
 Das Usermodul kümmert sich um alle Anfragen, die etwas mit Benutzern zu tun haben. Hier können Nutzer erstellt, geupdated, verifiziert und gelöscht werden.
