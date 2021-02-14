@@ -120,9 +120,13 @@ User:<a name="user_object"></a>
 
 | Name          | Type           |Required        | Description
 | ------------- |-------------   |------------    | -----
-| limit (query) | string         |                |Standard limit: 25                        
-| category (query)| string       |                | Category ID of the offer
+| post_code (query) | string     | X              | Postcode of user
+| limit (query) | number         |                |Standard limit: 25                        
+| category (query)| number       |                | Category ID of the offer
 | search (query) | string        |                | Part of title of the offer
+| distance (query) | number      |                | Standard distance: 30 km
+| price_below (query)| number    |                | Price of offer lower than
+| rating_above (query)| number   |                | Min rating of offer
 
 ### Success Responses
 
@@ -139,6 +143,30 @@ Response example:
 | Code          | Description           | Error Message      
 | ------------- |---------------------  |-------------
 | 400           | BAD REQUEST           | Not a valid input         
+| 500           | INTERNAL SERVER ERROR | Something went wrong
+<br>
+
+## `GET` /offer/top-categories
+#### Returns the four categories with most offers in it
+### Parameters
+
+none 
+
+
+### Success Responses
+
+| Code          | Description           | Response      
+| ------------- |---------------------  |-------------
+| 200           | OK                    | 
+
+Response example:
+
+`Array<`[Category](#category_object)`>`
+
+### Error
+
+| Code          | Description           | Error Message      
+| ------------- |---------------------  |-------------          
 | 500           | INTERNAL SERVER ERROR | Something went wrong
 <br>
 
@@ -194,7 +222,7 @@ Returns the image.
 
 ## `GET` /offer/user-offers/{id}
 
-#### Returns all offers for a user id. Authorization required.
+#### Returns all offers for a user id.
 ### Parameters
 
 | Name          | Type           |Required        | Description
@@ -225,7 +253,10 @@ Response example:
 #### Returns a set of offers to be shown on the Homepage
 ### Parameters
 
-none                       
+| Name          | Type           |Required        | Description
+| ------------- |-------------   |-------------   | -----
+| post_code (query) | string     |       x        | Postcode of user
+| distance (query)  | number     |                | Default distance: 30km
 
 
 ### Success Responses
@@ -499,7 +530,7 @@ Example response:
 
 <br>
 
-## `DELETE` /offer/{id}
+## `PATCH` /offer/delete-offer/{id}
 #### Deletes an offer by id. Authorization needed.
 ### Parameters
 
@@ -708,35 +739,181 @@ Example response:
 | 404           | NOT  FOUND            |Not a valid offer
 | 500           | INTERNAL SERVER ERROR |Something went wrong...
 
-
-
-## USER
-***
-## `GET` /user/all
+## `POST` /offer/user-requests
+#### returns a request for a given request id OR all requests for a given user and status
 ### Parameters
 
-| Name          | Type           |Required        | Description
-| ------------- |-------------   |------------    | -----
-| limit (query) | string         |                |Standard=25                        
-
+| Name          | Type          | Required       |   Description
+| ------------- |-------------  |-------------   | -----
+| body (body)   | object        |      x         | ```{```<br>&nbsp;&nbsp;&nbsp;```"session": { ```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``` "session_id": "eef88333-2118-4f2e-950c-444f2a31da10", ```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``` "user_id": "eef88333-2118-4f2e-950c-444f2a31da10" ```<br>&nbsp;&nbsp;&nbsp;```},```<br>&nbsp;&nbsp;&nbsp;```"request"?: {}, "status_code":5, "lessor":true```<br>```}```
 
 ### Success Responses
 
 | Code          | Description           | Response      
 | ------------- |---------------------  |-------------
 | 200           | OK                    | 
-| 201           | CREATED               |  
 
+Example response:
+Array<[Request](#request_object)>
+OR
+[Request](#request_object)
+```javascript
+{
+    "request_id": "ef88333-2118-4f2e-950c-444f2a31da10",
+    "user": {
+        "user_id": "ef88333-2118-4f2e-950c-444f2a31da10",
+        "first_name": "Name",
+        "last_name": "Name",
+        "verified": true,
+        "place_id": 8952,
+        "lessee_rating": 0,
+        "number_of_lessee_ratings": 0,
+        "lessor_rating": 0,
+        "number_of_lessor_ratings": 0,
+        "email": "mail@test.com",
+        "phone_number": "123456789",
+        "street": "Street",
+        "house_number": "4",
+        "date_of_birth": "2020-06-12T22:00:00.000Z",
+        "post_code": "01234",
+        "city": "City"
+    },
+    "offer": {
+        "offer_id": "ef88333-2118-4f2e-950c-444f2a31da10",
+        "title": "Title",
+        "description": "Description",
+        "number_of_ratings": 1,
+        "rating": 5.0,
+        "price": 12.25,
+        "category": {
+            "name": "Category 1",
+            "category_id": 1,
+            "picture_link": "picture_link"
+        },
+        "picture_links": [
+            "/path/to/image/"
+        ],
+        "lessor": {
+            "first_name": "Name",
+            "last_name": "Name",
+            "user_id": "ef88333-2118-4f2e-950c-444f2a31da10",
+            "post_code": "1067",
+            "city": "City",
+            "verified": false,
+            "lessor_rating": 5.0,
+            "number_of_lessor_ratings": 20
+        },
+        "blocked_dates": [
+            {
+                "from_date": "2021-04-22T22:00:00.000Z",
+                "to_date": "2021-04-22T22:00:00.000Z"
+            }
+        ]
+    },
+    "status_id": 1,
+    "date_range": {
+        "from_date": "2021-05-01T00:00:00.000Z",
+        "to_date": "2021-05-01T00:00:00.000Z",
+    },
+    "message": "Message"
+}
+```
 ### Error
 
 | Code          | Description           | Error Message      
-| ------------- |---------------------  |------------- 
-| 400           | BAD REQUEST           |
-| 401           | UNAUTHORIZED          |
-| 404           | NOT  FOUND            |
-| 500           | INTERNAL SERVER ERROR |
+| ------------- |---------------------  |-------------
+| 400           | BAD REQUEST           |Not a valid offer
+| 404           | NOT  FOUND            |Not a valid offer
+| 500           | INTERNAL SERVER ERROR |Something went wrong...
 
-<br>
+## `POST` /offer/handle-requests
+#### Accepts a request object; Is used for whole booking process
+### Parameters
+
+| Name          | Type          | Required       |   Description
+| ------------- |-------------  |-------------   | -----
+| body (body)   | object        |      x         | ```{```<br>&nbsp;&nbsp;&nbsp;```"session": { ```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``` "session_id": "eef88333-2118-4f2e-950c-444f2a31da10", ```<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``` "user_id": "eef88333-2118-4f2e-950c-444f2a31da10" ```<br>&nbsp;&nbsp;&nbsp;```},```<br>&nbsp;&nbsp;&nbsp;```"request": {"status_code": 5, ...}, ```<br>```}```
+
+### Success Responses
+
+| Code          | Description           | Response      
+| ------------- |---------------------  |-------------
+| 200           | OK                    | 
+
+Example response:
+[Request](#request_object)
+```javascript
+{
+    "request_id": "ef88333-2118-4f2e-950c-444f2a31da10",
+    "user": {
+        "user_id": "ef88333-2118-4f2e-950c-444f2a31da10",
+        "first_name": "Name",
+        "last_name": "Name",
+        "verified": true,
+        "place_id": 8952,
+        "lessee_rating": 0,
+        "number_of_lessee_ratings": 0,
+        "lessor_rating": 0,
+        "number_of_lessor_ratings": 0,
+        "email": "mail@test.com",
+        "phone_number": "123456789",
+        "street": "Street",
+        "house_number": "4",
+        "date_of_birth": "2020-06-12T22:00:00.000Z",
+        "post_code": "01234",
+        "city": "City"
+    },
+    "offer": {
+        "offer_id": "ef88333-2118-4f2e-950c-444f2a31da10",
+        "title": "Title",
+        "description": "Description",
+        "number_of_ratings": 1,
+        "rating": 5.0,
+        "price": 12.25,
+        "category": {
+            "name": "Category 1",
+            "category_id": 1,
+            "picture_link": "picture_link"
+        },
+        "picture_links": [
+            "/path/to/image/"
+        ],
+        "lessor": {
+            "first_name": "Name",
+            "last_name": "Name",
+            "user_id": "ef88333-2118-4f2e-950c-444f2a31da10",
+            "post_code": "1067",
+            "city": "City",
+            "verified": false,
+            "lessor_rating": 5.0,
+            "number_of_lessor_ratings": 20
+        },
+        "blocked_dates": [
+            {
+                "from_date": "2021-04-22T22:00:00.000Z",
+                "to_date": "2021-04-22T22:00:00.000Z"
+            }
+        ]
+    },
+    "status_id": 1,
+    "date_range": {
+        "from_date": "2021-05-01T00:00:00.000Z",
+        "to_date": "2021-05-01T00:00:00.000Z",
+    },
+    "message": "Message"
+}
+```
+### Error
+
+| Code          | Description           | Error Message      
+| ------------- |---------------------  |-------------
+| 400           | BAD REQUEST           |Not a valid offer
+| 404           | NOT  FOUND            |Not a valid offer
+| 500           | INTERNAL SERVER ERROR |Something went wrong...
+
+
+## USER
+***
 
 ## `GET` /user/{id}
 #### Returns a single user specified by the ID passed in the URL.
