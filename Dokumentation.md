@@ -18,6 +18,7 @@
 2.5) [Docker](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#docker)<br>
 2.6) [Google Geocoding API](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#google-geocoding-api)<br>
 2.7) [OAuth2](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#oauth2)<br>
+2.8) [SMS-Gateway und SMS-Validierung](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#oauth2)<br>
 3) [Frontend](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#frontend)<br>
 3.1) [Repository](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#repository)<br>
 3.2) [Verwendete Technologien](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#verwendete-technologien)<br>
@@ -87,6 +88,40 @@ Die [Google Maps API](https://developers.google.com/maps/documentation?hl=de) wi
 
 ### OAuth2
 Ein User oder Resource Owner kann mit Hilfe des OAuth2 Protokolls einer Anwendung (Client) den Zugriff auf seine Daten erlauben, die von einem anderen Dienst (Resource Server) bereitgestellt werden, ohne geheime Details seiner Zugangsberechtigung dem Client preiszugeben. Beispielsweise kann ein User einem Dritten (in diesem Fall unserer App) erlauben, auf seine/ihre Daten auf Facebook, Google & Co. zuzugreifen. Das erfolgt durch manuelle Bestätigung des Users bei der Registrierung (Sign up with Google/Apple/Facebook). Nach erfolgter Bestätigung erhalten wir einen Token, den wir benutzen können, um bei den APIs von Google/Apple/Facebook Informationen über den User aufzurufen, und zwar nur in dem Umfang, den der User vorher freigegeben hat. Bei uns beschränkt sich das auf die Email und den Vor- und Nachnamen des Users, damit wir die Registrierung vereinfachen können und den User schneller und komfortabler einloggen können.
+
+### SMS-Gateway und SMS-Validierung
+"Ein SMS-Gateway erlaubt das Senden und den Empfang von SMS-Nachrichten mittels anderer Geräte als Mobiltelefonen."([Wikipedia](https://de.wikipedia.org/wiki/SMS-Gateway))
+Um die Telefonnummern unserer Nutzer zu verifizieren wird ein sechstelliger Code per SMS an die Benutzer versendet.
+Dieser Code wird von uns generiert und für die Validierung zusammen mit einer eindeutigen NutzerID wieder an den Server versendet.
+Für das versenden von SMS gibt es verschiedene Möglichkeiten:
+- Nutzen eines SMS-Gateway-Anbieters
+- Eigene SMS-Gateway Hardware
+- Nutzen des eigenen Mobiltelefons
+
+Wird ein externer Anbieter verwendet, fallen pro gesendeter SMS gebühren zwischen 7 und 15 Cent an.
+Meist muss dazu noch eine monatliche Grundgebühr bezahlt werden.
+Wenn keine Finanziellen hinter einer Anwendung stehen, sind dies zusätzliche Kosten, die bezahlt werden müssen.
+Auch teilen sich die Nutzer des Anbieters verschiedene Nummern. Wenn eine eigene Nummer genutzt werden soll, kostet dies meist extra.
+Eine weitere Möglichkeit ist der Kauf von SMS-Gateway-Hardware und der Betrieb eines eigenen Gateway-Dienstes.
+Dafür kann im einfachsten Fall einfach ein SIM-USB-Stick mit einem Rechner verwendet werden.
+Mobilfunkanbieter verbieten jedoch meist den "missbrauch" des Vertrags zum senden von vielen SMS, zudem kann keine Garantie über eine zuverlässige Funktionsweise gegeben werden. Es gibt jedoch auch Anbieter, die SIM-Karten dafür bereitstellen.
+Dann muss nur für die SIM-Karte, den Rechner und den SIM-Kartenadapter bezahlt werden.
+Auch hier können die Kosten für einen einfachen Test sehr hoch sein, weshalb die Anschaffung der Hardware unter Umständen nicht rentabel ist.
+
+Für einfache Tests kann auch ein Mobiltelefon verwendet werden. Dazu kann eine App installiert werden, die einen HTTP-Server startet, der Anfragen entgegen nimmt. Die SMS werden dann über die SIM-Karte des Handys versendet.
+Diese Option bietet sich für das Testen von SMS-Validierungsfunktionen an, da viele Nutzer in ihren Mobilfunkverträgen hunderte oder unbegrenzt viele freie SMS pro Monat haben. Der Nachteil ist hierbei jedoch, dass die eigene Mobilfunknummer für die Benutzer sichtbar ist. Zudem muss bei der Nutzung mit einem externen ein dynDNS-Eintrag auf dem Router erstellt werden oder eine statische IP-Adresse gekauft werden. Zudem wird eine Port-Weiterleitung auf das Mobilgerät benötigt. Es kann auch hier keine Garantie gegeben werden, dass SMS verschickt werden. Zudem verbieten die meisten Anbieter das Ausnutzen der unbegrenzten Nachrichten für diese Zwecke in ihren Verträgen. Für kleinere Tests sollte dies jedoch kein Problem darstellen.
+Für unsere App verwenden wir die Gateway APP ["Traccar SMS Gateway"](https://www.traccar.org/sms-gateway/). Diese muss als Standard SMS-App gesetzt sein, um das SMS-Gateway nutzen zu können. Ein kostenloser DynDNS-Anbieter den wir verwenden ist [NoIP](https://www.noip.com).
+
+Die Doku für die SMS-Gateway-App findet sich [hier](https://www.traccar.org/http-sms-api/).
+Für die Nutzung muss ein `POST` auf die IP und den Port des Mobiltelefons gemacht werden (Die Daten werden in der App angezeigt, wenn das Gateway in den Einstellunge aktiviert wurde).
+Der Body der HTTP-Anfrage sieht so aus:
+```javascript
+{
+  "to": "{phone}",
+  "message": "{message}"
+}
+```
+Wichtig ist, dass in Header der Anfrage der API-Token aus der App mitgegeben wird. Das entsprechende Headerfeld heißt `authorization` und ist vom Typ API Key!
 
 ## Frontend
 ### Repository
