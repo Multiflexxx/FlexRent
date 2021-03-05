@@ -1,0 +1,62 @@
+{
+  "meta":{
+    "author":"Marcel Mertens",
+    "version":"1.0",
+    "uuid":"cca4a7e9-39d3-4a7e-8de1-95d677472a5f"
+  },
+  "decks":{
+    "d0":{
+      "meta":{
+        "deck_name":"SMS-Validierung und SMS-Gateways",
+        "next_card_id":2,
+        "description":"Diese Deck beeinhaltet Informationen zu SMS-Validierungen und SMS-Gateways"
+      },
+      "cards":{
+        "0":{
+          "q":"Was macht ein SMS-Gateway?",
+          "a":"Ein SMS-Gateway erlaubt es SMS zu senden und zu empfangen ohne dafür ein mobiles Endgerät zu verwenden."
+        },
+        "1":{
+          "q":"Wie können Telefonnummern von Nutzern einer APP validiert werden?",
+          "a":"Durch das Versenden eines Tokens per SMS an die Mobilfunknummer einer Person."
+        },
+        "2":{
+          "q":"Wie findet die Validierung statt?",
+          "a":"Ein Server generiert einen Token, dieser wird per SMS an den Nutzer geschickt. Zur Überprüfung wird der Token zusammen mit einer eindeutigen Identifikationsnummer für den Nutzer zurück an den Server geschickt (z.B. durch das Aufrufen eines API-Endpunktes)."
+        },
+        "3":{
+          "q":"Welche Möglichkeiten gibt es für SMS-Gateways?",
+          "a":"- Nutzung eines externen Anbieters\n- Nutzen eigener SMS-Gateway Hardware\n- Nutzen des eigenen Mobiltelefons"
+        },
+        "4":{
+          "q":"Welche Vorteile bieten externe SMS-Gateway-Anbieter?",
+          "a":"Der Anbieter stellt alle notwendigen Funktionen zur Verfügung um automatisiert SMS zu versenden. Meist gibt es dazu eine API, die direkt verwendet werden kann."
+        },
+        "5":{
+          "q":"Welche Nachteile bieten externe SMS-Gateway-Anbieter?",
+          "a":"Meist sind die Kosten für professionelle SMS-Gateways sehr hoch."
+        },
+        "6":{
+          "q":"Welche Vorteile bietet eigene SMS-Gateway-Hardware?",
+          "a":"Die Kosten können geringer ausfallen, wen kostengünstige Hardware verwendet wird."
+        },
+        "7":{
+          "q":"Welche Nachteile bietet eigene SMS-Gateway-Hardware?",
+          "a":"Eigene Hardware muss gewartet werden. Zudem gibt es keine Garantie, dass das Gateway immer funktioniert. Je nach Einsatzzweck ist der Einsatz eigener Hardware nicht rentabel."
+        },
+        "8":{
+          "q":"Welche Vorteile bietet die Nutzung des eigenen Mobiltelefons?",
+          "a":"Es wird nur eine App benötigt, die einen  HTTP-Server auf dem Mobiltelefon startet. Die meist freien SMS pro Monat eines vorhandenen Mobilfunkvertrags können dann verwendet werden."
+        },
+        "9":{
+          "q":"Welche nachteile bietet die Nutzung des eigenen Mobiltelefons?",
+          "a":"Viele Mobilfunkanbieter verbieten die Nutzung des Vertrages für den Zweck eines SMS-Gateways. Zudem ist nicht gewährleistet, dass das Gateway immer funktioniert. Für mehr als Testzwecke eignet sich die Nutzung des Mobiltelefons nicht."
+        },
+        "10":{
+          "q":"Welche App kann als SMS-Gateway verwendet werden?",
+          "a":"Die App \"Traccar SMS Gateway\" kann als SMS-Gateway verwendet werden."
+        }
+      }
+    }
+  }
+}
