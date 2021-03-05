@@ -18,7 +18,7 @@
 2.5) [Docker](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#docker)<br>
 2.6) [Google Geocoding API](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#google-geocoding-api)<br>
 2.7) [OAuth2](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#oauth2)<br>
-2.8) [SMS-Gateway und SMS-Validierung](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#oauth2)<br>
+2.8) [SMS-Gateway und SMS-Validierung](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#sms-gateway-und-sms-validierung)<br>
 3) [Frontend](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#frontend)<br>
 3.1) [Repository](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#repository)<br>
 3.2) [Verwendete Technologien](https://github.com/Multiflexxx/FlexRent/blob/master/Dokumentation.md#verwendete-technologien)<br>
