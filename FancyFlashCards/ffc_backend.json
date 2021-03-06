@@ -1,0 +1,62 @@
+{
+  "meta": {
+    "author": "Benno Grimm",
+    "version": "1.0",
+    "uuid": "cda4a7e9-30d3-4a7e-9de2-93d677472a5f"
+  },
+  "decks": {
+    "d0": {
+      "meta": {
+        "deck_name": "Übersicht über Backendentwicklung",
+        "next_card_id": 0,
+        "description": "Dieses Deck beinhaltet eine Übersicht über Backendentwicklung"
+      },
+      "cards": {
+        "0": {
+          "q": "Was ist eine JavaScript Runtime?",
+          "a": "Eine Runtime ist eine Software die als Umgebung genutzt werden kann, um JavaScript Code auszuführen. In der Backendentwicklung wird eine Runtime Umgebung genutzt, um serverseitig JavaScript auszuführen."
+        },
+        "1": {
+          "q": "Was ist node.js?",
+          "a": "Node.js ist eine JavaScript Runtime Umgebung, die JavaScript Code ausführt. In der Backendentwicklung wird node.js zum Ausführen von Servercode genutzt."
+        },
+        "2": {
+          "q": "Was ist NPM?",
+          "a": "NPM, oder Node Package Manager ist nach eigener Angabe die weltweite größte Software Registry. Als Paketmanager kann NPM von Entwicklern dazu genutzt werden, auf einfache Art und Weise Code anderer Entwickler zu nutzen und eigenen Code anderen zur Verfügung zu stellen. Auf der Website npmjs.com sind über 300.000 Packages zu finden, die von jedem frei verwendet verden können."
+        },
+        "3": {
+          "q": "Was ist ein JavaScript Framework?",
+          "a": "Im Grunde ist ein JavaScript Framework eine bereitgestellte Sammlung von JavaScript Code, die grundlegende Funktionalitäten bereitstellt. In der Backendentwicklung werden diese Frameworks beispielsweise zur Bereitsstellung grundlegender Funktionen eines HTTP Servers genutzt. Beispiele für solche Frameworks sind Deno, nest.js und Express."
+        },
+        "4": {
+          "q": "Welche Vorteile bieten Frameworks?",
+          "a": "Ob im Backend oder Frontend, das Rad neu erfinden zu müssen ist unnötig (und unsicher). Frameworks bieten viele Grundlegende Funktionen, die in jedem Server Projekt benötigt sind und gehen oft mit Software Design Praktiken einher, die das Entwickeln von Code einfacher machen."
+        },
+        "5": {
+          "q": "Welche Nachteile gehen mit Frameworks einher?",
+          "a": "Mit der Benutzung eines Frameworks bindet man sich an die Prinzipien des Frameworks, grundlegend ist das keine schlechte Sache, allerdings ist es manchmal wünschenswert eigene Konzepte umsetzen, die in einem Framework nur erschwert umgesetzt werden können."
+        },
+        "6": {
+          "q": "Was ist TypeScript?",
+          "a": "TypeScript ist eine Erweiterung von JavaScript die Typen und damit Typensicherheit hinzufügt. Durch statische Typdefinitionen können Fehler schon beim Programmieren vermieden werden, was die Codequalität und Lebensqualität gepeinigter Programmierer verbessert."
+        },
+        "7": {
+          "q": "Wie arbeitet man mit Daten?",
+          "a": "Daten, die aus dem Frontend, also vom Client kommen sind grundlegend unsicher. Als Entwickler muss man also sichergehen, dass alle eingehenden Daten validiert werden. Das kann über das einfache Validieren von Email Addressen bishin zum Überprüfen von Berechtigungen gehen."
+        },
+        "8": {
+          "q": "Wie arbeitet man mit einer Datenbankverbidnung?",
+          "a": "Für eine übersichtliche Modularisierung lohnt es sich oft Komponenten, wie einen Datenbank Connector auszulagern. Außerdem solltest du aus dem gleichen Grund deine Datenbank Abfragen nicht da bauen, wo deine Programmlogik abläuft. Baue dir auch hier einen QueryBuilder, oder etwas ähnliches."
+        },
+        "9": {
+          "q": "Was sind Prepared Statements?",
+          "a": "Sagen dir SQL Injections etwas? Wenn nicht auch nicht schlimm, dir sollte aber auf jeden Fall klar sein, dass sie nicht gut sind. Allerdings musst du dich nicht weiter damit außeinandersetzen, wenn du Prepared Statements benutzt. Eine Query \"SELECT * FROM user WHERE user_id = ?;\" ist ein Prepared Statement und wird von deinem Datenbank Connector bei Ausführung der Query mit Parametern (der user_id) befüllt. Prepared Statements sind nicht schwierig zu benutzen und du solltest dies auf jeden Fall tun!"
+        },
+        "10": {
+          "q": "Wie funktioniert die Validierung von Email-Adressen?",
+          "a": "Der Server generiert einen Token und einen Code. Beide werden in einer Datenbank gespeichert und dann an eine zu bestätigende Email Adresse versandt. Beim anklicken eines Bestätigungslinks werden Code und Token an den Server geschickt. Da nur der Server und der Empfänger der Email Token und Code kennen, kann die Email als bestätigt einegstuft werden."
+        }
+      }
+    }
+  }
+}
