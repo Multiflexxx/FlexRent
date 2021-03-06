@@ -1,0 +1,58 @@
+{
+    "meta": {
+        "author": "Tristan Emig",
+        "version": "1.0",
+        "uuid": "c1027e45-2e1a-4536-ba81-451f5950f4e1"
+    },
+    "decks": {
+        "d0": {
+            "meta": {
+                "deck_name": "Flutter und BloC Pattern",
+                "next_card_id": 0,
+                "description": "Dieses Card-Deck beinhaltet Informationen über das Google UI Toolkit für native Appentwicklung"
+            },
+            "cards": {
+                "0": {
+                    "q": "Was für Applikationen können mit dem UI Toolkit Flutter gebaut werden?",
+                    "a": "Mobile, Web und Desktop Anwendungen und das alles basierend auf einem Code"
+                },
+                "1": {
+                    "q": "Auf welcher Programmiersprache basiert Flutter",
+                    "a": "Dart: Dart ist eine client-optimierte Programmiersprache für schnelle Apps auf unterschiedlichstes Plattformen"
+                },
+                "2": {
+                    "q": "Was für unterschiedliche Widgets können in Flutter erstellt werden?",
+                    "a": "In Flutter unterscheidet man zwischen Stateless und Statefull Widgets."
+                },
+                "3": {
+                    "q": "Was ist ein Stateless Widgets?",
+                    "a": "Ein Stateless Widgets ist ein Teil des zu beschreibende UI, welches Dinge anzeigt, die sich nicht im Lifecyle der Applikation ändern."
+                },
+                "4": {
+                    "q": "Was ist ein Statefull Widgets?",
+                    "a": "Ein Statefull Widgets ist ein Teil des zu beschreibende UI, welches Dinge anzeigt, die sich während des Lifecyles der Applikation ändern kann. Dies kann über den State des Widgets erreicht werden. (Ähnlich zu React)"
+                },
+                "5": {
+                    "q": "Wie können die Widgets gestylt werden ?",
+                    "a": "Das Styling erfolgt innerhalb der verwendeten UI Komponenten."
+                },
+                "6": {
+                    "q": "Wie können zusätzliche Packages in Flutter installiert werden?",
+                    "a": "Packeges bzw. Dependencies können über der die pubspec.yaml installiert werden."
+                },
+                "7": {
+                    "q": "Was ist das BLoC Pattern?",
+                    "a": "BLoC steht für Business Logic Component und ermöglicht es die Flutter Appliaktion in drei Ebenen zu unterteilen: Presenation-Layer, Business Logic und Data Layer. Somit kann durch das BLoC Pattern ein MVC-Konzept der Applikation hinzugefügt werden, was die Qualität der Applikation erhöht."
+                },
+                "8": {
+                    "q": "Wie funktioniert das BLoC Pattern?",
+                    "a": "Ein BLoC besteht aus drei Komponenten: Events, BLoC und State. Um den BLoC zu erreichen, definiert man Events die über die Presentation-Layer aufgerufen werden können. Diese Events triggeren im eigentlichen BLoC Funktionen. Die einzelnen Funktion interargieren mit der Daten-Layer und geben die Daten über Stati wieder."
+                },
+                "9": {
+                    "q": "Muss man das BLoC Pattern verwenden?",
+                    "a": "Bei kleinen Applikationen reichen die von Flutter bereitgestellten Funktionalitäten aus. Dennoch ist bereits bei kleinen Applikationen der Einsatz dieses Patterns zu empfehlen, da eine übersichtlichere und vor allem leichtere zu testende Applikation geschrieben wird. "
+                }
+            }
+        }
+    }
+}
