@@ -45,7 +45,7 @@
           "a": "Daten, die aus dem Frontend, also vom Client kommen sind grundlegend unsicher. Als Entwickler muss man also sichergehen, dass alle eingehenden Daten validiert werden. Das kann über das einfache Validieren von Email Addressen bishin zum Überprüfen von Berechtigungen gehen."
         },
         "8": {
-          "q": "Wie arbeitet man mit einer Datenbankverbidnung?",
+          "q": "Wie arbeitet man mit einer Datenbankverbindung?",
           "a": "Für eine übersichtliche Modularisierung lohnt es sich oft Komponenten, wie einen Datenbank Connector auszulagern. Außerdem solltest du aus dem gleichen Grund deine Datenbank Abfragen nicht da bauen, wo deine Programmlogik abläuft. Baue dir auch hier einen QueryBuilder, oder etwas ähnliches."
         },
         "9": {
