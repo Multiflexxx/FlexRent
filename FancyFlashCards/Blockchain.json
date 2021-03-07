@@ -1,58 +1,58 @@
 {
-meta: {
-author: "Anton Ochel",
-version: "1.0",
-uuid: "4de0247b-b497-4aa1-9b78-c6ba465993a7"
-},
-decks: {
-d0: {
-meta: {
-deck_name: "Blockchaintechnologie",
-next_card_id: 0,
-description: "Dieses Deck beschäftigt sich mit Fragen zu Blockchain"
-},
-cards: {
-0: {
-q: "Woher kommt der Name Blockchain?",
-a: "Der Name Blockchain bezieht sich auf die Verlinkung von den verschiedenen Blöcken."
-},
-1: {
-q: "Was ist das besondere an der Blockchain?",
-a: "Die Blockchain ist absolut sicher. Sie ist im Nachhinein nicht veränderbar und es gibt keine zentrale Vertrauensinstanz."
-},
-2: {
-q: "Wie findet die Verlinkung der Blöcke statt?",
-a: "Es wird ein Blockhash über den Inhalten eines Blockes erstellt. Dieser wird dann im Inhalt des nächsten Blockes gespeichert, wodurch diese verkettet wird."
-},
-3: {
-q: "Was sind die bekanntesten Blockchains?",
-a: "Bitcoin, Etherium, sowie Multichain"
-},
-4: {
-q: "Was sind digital Contracts",
-a: "Mit digital Contracts kann code innerhalb der Blockchain ausgeführt werden."
-},
-5: {
-q: "Wie funktioniert die Verteilung der Blockchain?",
-a: "Die Blockchain wird dezentral bei jedem Miner gespeichert. Somit hat jeder seine eigene Version des Ledgers."
-},
-6: {
-q: "Was ist ein Konsensalgorithmus",
-a: "Mit dem Konsensalgorithmus einigt sich das Blockchain Netzwerk auf die richtige Version der Blockchain."
-},
-7: {
-q: "Wie funktioniert der Konsensalgortihmus Proof of Work, welcher bei Bitcoin eingesetzt wird?",
-a: "Der Proof of Work funktioniert wie eine Art Lotterie, bei welcher der Einsatz rechenleistung ist. Wird eine gesuchte zufällige Zahl gefunden, kann ein neuer Block an die Chain angehangen werden."
-},
-8: {
-q: "Wie könnte ein ungültiger Block in die Bitcoin Blockchain gelangen?",
-a: "Wenn ein Angreifer 51% der gesamten Rechenleistung besitzt, könnte ein Angreifer einen ungültigen Block in die Kette einfügen"
-},
-9: {
-q: "Was sind Kritikpunkte an Bitcoin und anderen Blockchains?",
-a: "Ein großer Kritikpunkt ist der hohe Stromverbrauch und die Auswirkungen auf die Umwelt. Auch ist die Instabilität und das Handling als Investitionsgut kritisch angesehen."
-}
-}
-}
-}
+  meta: {
+    author: "Anton Ochel",
+    version: "1.0",
+    uuid: "4de0247b-b497-4aa1-9b78-c6ba465993a7"
+  },
+  decks: {
+    d0: {
+      meta: {
+        deck_name: "Blockchaintechnologie",
+        next_card_id: 0,
+        description: "Dieses Deck beschäftigt sich mit Fragen zu Blockchain"
+      },
+      cards: {
+        0: {
+            q: "Woher kommt der Name Blockchain?",
+            a: "Der Name Blockchain bezieht sich auf die Verlinkung von den verschiedenen Blöcken."
+        },
+        1: {
+            q: "Was ist das besondere an der Blockchain?",
+            a: "Die Blockchain ist absolut sicher. Sie ist im Nachhinein nicht veränderbar und es gibt keine zentrale Vertrauensinstanz."
+        },
+        2: {
+            q: "Wie findet die Verlinkung der Blöcke statt?",
+            a: "Es wird ein Blockhash über den Inhalten eines Blockes erstellt. Dieser wird dann im Inhalt des nächsten Blockes gespeichert, wodurch diese verkettet wird."
+        },
+        3: {
+            q: "Was sind die bekanntesten Blockchains?",
+            a: "Bitcoin, Etherium, sowie Multichain"
+        },
+        4: {
+            q: "Was sind digital Contracts",
+            a: "Mit digital Contracts kann code innerhalb der Blockchain ausgeführt werden."
+        },
+        5: {
+            q: "Wie funktioniert die Verteilung der Blockchain?",
+            a: "Die Blockchain wird dezentral bei jedem Miner gespeichert. Somit hat jeder seine eigene Version des Ledgers."
+        },
+        6: {
+            q: "Was ist ein Konsensalgorithmus",
+            a: "Mit dem Konsensalgorithmus einigt sich das Blockchain Netzwerk auf die richtige Version der Blockchain."
+        },
+        7: {
+            q: "Wie funktioniert der Konsensalgortihmus Proof of Work, welcher bei Bitcoin eingesetzt wird?",
+            a: "Der Proof of Work funktioniert wie eine Art Lotterie, bei welcher der Einsatz rechenleistung ist. Wird eine gesuchte zufällige Zahl gefunden, kann ein neuer Block an die Chain angehangen werden."
+        },
+        8: {
+            q: "Wie könnte ein ungültiger Block in die Bitcoin Blockchain gelangen?",
+            a: "Wenn ein Angreifer 51% der gesamten Rechenleistung besitzt, könnte ein Angreifer einen ungültigen Block in die Kette einfügen"
+        },
+        9: {
+            q: "Was sind Kritikpunkte an Bitcoin und anderen Blockchains?",
+            a: "Ein großer Kritikpunkt ist der hohe Stromverbrauch und die Auswirkungen auf die Umwelt. Auch ist die Instabilität und das Handling als Investitionsgut kritisch angesehen."
+        }
+      }
+    }
+  }
 }
