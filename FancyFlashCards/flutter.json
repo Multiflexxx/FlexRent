@@ -38,7 +38,7 @@
                 },
                 "6": {
                     "q": "Wie können zusätzliche Packages in Flutter installiert werden?",
-                    "a": "Packeges bzw. Dependencies können über der die pubspec.yaml installiert werden."
+                    "a": "Packages bzw. Dependencies können über der die pubspec.yaml installiert werden."
                 },
                 "7": {
                     "q": "Was ist das BLoC Pattern?",
