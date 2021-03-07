@@ -1,10 +1,10 @@
 {
-  meta: {
+  "meta": {
     author: "Anton Ochel",
     version: "1.0",
     uuid: "4de0247b-b497-4aa1-9b78-c6ba465993a7"
   },
-  decks: {
+  "decks": {
     d0: {
       meta: {
         deck_name: "Blockchaintechnologie",
