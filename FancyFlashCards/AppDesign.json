@@ -1,0 +1,58 @@
+{
+  "meta":{
+    "author":"Tizian Groß",
+    "version":"1.0",
+    "uuid":"3ca6ccfb-553d-478e-a8ad-206c1be4ab03"
+  },
+  "decks":{
+    "d0":{
+      "meta":{
+        "deck_name":"Adobe Illustrator",
+        "next_card_id":0,
+        "description":"Dieses Deck beinhaltet Informationen Adobe Illustrator und Designs für mobile Geräte"
+      },
+      "cards":{
+        "0":{
+          "q":"Was sind die Vorteile von SVG's?",
+          "a":"Scalable Vector Graphics sind skalierbare Vektorgrafiken. Sie bestehen aus Pfaden und nicht aus Pixeln wodurch sie sich gut auf verschiedene Größen skalieren lassen. Zudem sind sind sie durch CSS anpassbar und haben eine geringe Dateigröße."
+        },
+        "1":{
+          "q":"Was zeichnet Flat Design aus?",
+          "a":"Darstellung durch einfache Formen. Auf das einfache konzentrieren."
+        },
+        "2":{
+          "q":"Was sind die Vorteile von Flat Design?",
+          "a":"Schnelle Ladezeiten auch bei mobilen Geräten. Komplexe Objekte werden vereinfacht."
+        },
+        "3":{
+          "q":"Wofür sind Ebenen in Adobe Illustrator gut?",
+          "a":"Objekte die in Ebenen angeordnet sind können gemeinsam ein- und ausgeblendet sowie gesperrt werden."
+        },
+        "4":{
+          "q":"Wie müssen Illustrationen für den Export von Adboe Illustrator zu Adobe After Effects vorbereitet werden?",
+          "a":"1. Jeden Pfad in eine Ebene umwandeln (Ebenen für Objekte erstellen). 2. Die Illustration als Illustratorfile speichern. 3. Illustration in Adobe After Effects als 'Composition mit Ebenen größe beibehalte' importieren 4. Formen aus den Vektorebenen erstellen"
+        },
+        "5":{
+          "q":"Was sind LottieFiles?",
+          "a":"LottieFiles sind im JSON-Format gespeicherte SVG-Animationen."
+        },
+        "6":{
+          "q":"Was sind Vorteile von LottieFiles?",
+          "a":"Etwa 600 mal kleiner als GIFs."
+        },
+        "7":{
+          "q":"Wie setzt sich Farbe zusammen?",
+          "a":"Farbton (Rot, Gelb, Blau, Grün), Sättigung (Intensivität einer Farbe) und Helligkeit (Dunklere und hellere Farbe). "
+        },
+        "8":{
+          "q":"Welche Farbschemata gibt es",
+          "a":"1. Monochromatisch (eine Basisfarbe in verschiedenen Sättigungen und Helligkeiten) 2. Analog (drei Farben nebeneinander im Farbrad) 3. Triade (Drei Farben, die durch ein die Ecken eines gleichseitiges Dreieck verbunden sind)"
+        },
+        "9":{
+          "q":"LottieFiles in Flutter",
+          "a":"1. Dependencie in der pubspex yaml einfügen 2. das package importieren 3. Add assets to pubspec — yaml file 4. Die LottieFiles in Assetsordern einfügen 5. Widget Lottie.asset() an der passenden Stelle einbauen"
+        },
+      }
+    }
+  }
+}
