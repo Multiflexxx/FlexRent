@@ -1,0 +1,58 @@
+{
+  "meta":{
+    "author":"Anna-Lena Richert",
+    "version":"1.0",
+    "uuid":"ef54d216-d928-4ee0-ab81-ffa49dce6c53"
+  },
+  "decks":{
+    "d0":{
+      "meta":{
+        "deck_name":"Rechtliche Grundlagen zu Mietverträgen.",
+        "next_card_id":0,
+        "description":"Dieses Deck beinhaltet Informationen zu den rechtlichen Grundlagen von Mietverträgen."
+      },
+      "cards":{
+        "0":{
+          "q":"Was ist ein Mietvertrag?",
+          "a":"Ein Mietvertrag ist ein gegenseitiger schuldrechtlicher Vertrag zur zeiweisen Gebrauchsüberlassung gegen Entgelt."
+        },
+        "1":{
+          "q":"Welche Verpflichtung hat der Vermieter bei einem Mietvertrag?",
+          "a":"Der Vermeiter ist dazu verpflichtet, dem Mieter den Gebrauch der gemieteten Sache während der Mietzeit in einem vertragsmäßigen Zustand zu gewähren. Der Vermieter hat die auf der Mietsache ruhenden Lasten zu tragen. (§ 535 Abs. 1 BGB) "
+        },
+        "2":{
+          "q":"Welche Verpflichtung hat der Mieter bei einem Mietvertrag?",
+          "a":"Der Mieter ist dazu verpflichtet, dem Vermieter die vereinbarte Miete zu zahlen.(§ 535 Abs. 2 BGB) Der Mieter verpflichtet sich die gemietete Sache zum Ende des Mietverhältnisses zurückzugeben."
+        },
+        "3":{
+          "q":"Was kann alles vermietet werden?",
+          "a":"Mögliche Mietgegenstände sind bewegliche und unbewegliche Sachen oder Sachteile, die gebrauchstauglich sind."
+        },
+        "4":{
+          "q":"Welche Paragraphen befassen sich mit dem Mietrecht im deutschen Recht?",
+          "a":"Die §§ 535 - 580a des BGB"
+        },
+        "5":{
+          "q":"Was ist der Unterschied zwischen einer Leihe und einem Mietverhältnis?",
+          "a":"Bei einer Leihe wird der Gebrauch einer Sache unentgeltlich gestattet."
+        },
+        "6":{
+          "q":"Kann ein Mietvertrag, der für einen bestimmten Zeitraum abgeschlossen wurde, vorzeitig gekündigt werden?",
+          "a":"Grundsätzlich nicht. Der Vertrag endet erst mit Eintritt des vereinbarten Beendigungszeitpunktes. Es kann allerdings zwischen den Parteien eine Kündigungsfrist vereinbart werden."
+        },
+        "7":{
+          "q":"Wie kommt ein Mietvertrag zustande?",
+          "a":"Ein Mietvertrag kommt durch übereinstimmende Willenserklärungen (Angebot und Annahme) zustande."
+        },
+        "8":{
+          "q":"Wann ist die Miete bei unbeweglichen Sachen zu entrichten?",
+          "a":"Die Miete bei unbeweglichen Sachen ist am Ende der Mietzeit zu entrichten. Wenn die Miete allerdings nach Zeitabschnitten bemessen ist, ist sie nach Ablauf der einzelnen Zeitabschnitte zu entrichten. (§ 579 BGB)"
+        },
+        "9":{
+          "q":"Bedarf ein Mietvertrag einer besonderen Form?",
+          "a":"Nein, ein Mietvertrag bedarf grundsätzlich keiner besonderen Form, d.h. dieser kann auch mündlich geschlossen werden. Bei einem Mietvertrag über Wohnungen gibt es allerdings Sonderregelungen."
+        }
+      }
+    }
+  }
+}
