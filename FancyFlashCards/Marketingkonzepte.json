@@ -1,0 +1,58 @@
+{
+  "meta":{
+    "author":"Marleen Benner",
+    "version":"1.0",
+    "uuid":"3ca6ccfb-564d-478e-a8ad-206c1be4ab03"
+  },
+  "decks":{
+    "d0":{
+      "meta":{
+        "deck_name":"Marketingkonzepte",
+        "next_card_id":0,
+        "description":"Dieses Deck beinhaltet Informationen für eine Marketingstragie um eine mobile Applikation zu promoten"
+      },
+      "cards":{
+        "0":{
+          "q":"Wie sollte der Name der Appplikation gewählt werden?",
+          "a":"Der Name sollte: 1.Einfach 2.Kurz 3.Gut aussprechbar sein."
+        },
+        "1":{
+          "q":"Wie sollte die Kategorie im Store gewählt werden, die für die App in Frage kommt?",
+          "a":"Alle möglichen Kategorien sollten untersucht werden und die Anzahl der möglichen Downloads abgeschätzt werden. Die Kategorie mit den meisten Downloads sollte genommen werden."
+        },
+        "2":{
+          "q":"Warum ist ein Logo so wichtig?",
+          "a":"Es dient als Eye-Catcher und führt mögliche Kunden zu der App."
+        },
+        "3":{
+          "q":"Wie sollte die App im Store angeboten werden?",
+          "a":"Screenshots, die die App am Besten zeigen, sollten benutzt werden. Es soll erklärt werden, wie die App funktioniert und welchen Vorteil der Nutzer durch sie erfährt. Kurze, überzeugende Argumentationen sind immer besser als längere Texte."
+        },
+        "4":{
+          "q":"Welche Vertriebskanäle kommen zusätzlich in Frage, damit die App bekannter wird?",
+          "a":"Unternehmens-Websites, Social Media-Plattformen wie Facebook oder Instagram sowie E-Mail Marketing."
+        },
+        "5":{
+          "q":"Über welche Endgeräte ist die Schaltung von Werbung am effektivsten?",
+          "a":"Die Schaltung der Werbung über Mobilgeräte, wie Smartphones oder Tablets, ist von Vorteil, da der User direkt zur App in den App Store weitergeleitet werden kann und somit zum direkten Download aufgefordert wird."
+        },
+        "6":{
+          "q":"Wie kann die Rentention Rate konstant hoch gehalten werden?",
+          "a":"Benutzerfreundlcihkeit der App, Push-Nachrichten, Individualisierung der App."
+        },
+        "7":{
+          "q":"Was muss man bei der Rentention Rate beachten?",
+          "a":"Studien zufolge nimmt die Nutzung einer App innerhalb der ersten 90 Tage rapide ab. Das wird mit der Rentention Rate gemessen. "
+        },
+        "8":{
+          "q":"Warum sind Kundenberwertungen so wichtig?",
+          "a":"Es gibt kein besseres App Marketing, als Empfehlungen durch zufriedene Kunden."
+        },
+        "9":{
+          "q":"Was ist Cross Promotion?",
+          "a":"Ihr Partner macht Werbung in seiner App oder in seinem App Netzwerk und als Gegenleistung bekommt seine Werbung in Ihrer App, eine Zahlung pro Download oder für den Zeitraum oder anderes."
+        },
+      }
+    }
+  }
+}
