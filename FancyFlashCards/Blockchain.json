@@ -16,9 +16,13 @@
             "q": "Woher kommt der Name Blockchain?",
             "a": "Der Name Blockchain bezieht sich auf die Verlinkung von den verschiedenen Blöcken."
         },
+        "10": {
+            "q": "Was bedeutet DLT im Kontext von Blockchain?",
+            "a": "DLT ist das Akronym für Distributed Ledger Technology und beschreibt, dass die Blockchain in einem Netzwerk redundant und verteilt gespeichert wird."
+        },
         "1": {
-            "q": "Was ist das besondere an der Blockchain?",
-            "a": "Die Blockchain ist absolut sicher. Sie ist im Nachhinein nicht veränderbar und es gibt keine zentrale Vertrauensinstanz."
+            "q": "Was ist das besondere an einer Blockchain wie sie Beispielsweise bei Bitcoin zu finden ist?",
+            "a": "Die Blockchain gilt als absolut sicher, solange über 50% des Netzwerks 'ehrliche' Nodes sind. Sie ist im Nachhinein nicht veränderbar und es gibt keine zentrale Vertrauensinstanz."
         },
         "2": {
             "q": "Wie findet die Verlinkung der Blöcke statt?",
@@ -29,15 +33,15 @@
             "a": "Bitcoin, Etherium, sowie Multichain"
         },
         "4": {
-            "q": "Was sind digital Contracts",
-            "a": "Mit digital Contracts kann code innerhalb der Blockchain ausgeführt werden."
+            "q": "Was sind Digital Contracts?",
+            "a": "Mit Digital Contracts kann code innerhalb der Blockchain ausgeführt werden."
         },
         "5": {
             "q": "Wie funktioniert die Verteilung der Blockchain?",
             "a": "Die Blockchain wird dezentral bei jedem Miner gespeichert. Somit hat jeder seine eigene Version des Ledgers."
         },
         "6": {
-            "q": "Was ist ein Konsensalgorithmus",
+            "q": "Was ist ein Konsensalgorithmus?",
             "a": "Mit dem Konsensalgorithmus einigt sich das Blockchain Netzwerk auf die richtige Version der Blockchain."
         },
         "7": {
